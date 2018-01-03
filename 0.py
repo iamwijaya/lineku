@@ -16,27 +16,27 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EoGGreN8tVxk5csHYDm2.WCCRkMNgQXINSOQNF/5yiG.WcrdAkzlQhi+Zk0o7Bn++2kMMZJkXtwS5MbLXZnCIsU=")
+cl.login(token="EoKxMv7qqZTxNMiixrY2.WCCRkMNgQXINSOQNF/5yiG.w594oDdqxqW1/Wv34AFGlaZb8kycWhvNysYfsno2NDg=")
 cl.loginResult()
 
 kk = LineAlpha.LINE()
-kk.login(token="EoLTJTpurZHlSX0du6N1.6FEeUgZiJRekuif7AJkoyq.5+EkR8lhfCUsLNQmrNXwLFXnYZBK2rBsozAvsspTNGk=")
+kk.login(token="EoSZtaXXaxTNYN8AD5Q1.6FEeUgZiJRekuif7AJkoyq.x0eRiDeQ9zwITuV+mshyJXZn0IwW14J7m4BE/PobxIo=")
 kk.loginResult()
 
 ki = LineAlpha.LINE()
-ki.login(token="EobvAwgiSNbBoNHiCkfc.WU1DIxPO+PMAGO5zAJJf+a.4oSEi1Aya7zloTnumnzzOgOp4glFJ2B56hcyuwgoOW8=")
+ki.login(token="Eoa7JtDA6luYURrYmv8c.WU1DIxPO+PMAGO5zAJJf+a.f7aEPf2ut1iE3NAQsy2tHle8NHnFC/scrgikE2zX0Ik=")
 ki.loginResult()
 
 kc = LineAlpha.LINE()
-kc.login(token="EoIAfqedqQnNTUpb3rl0.SIIDQHB+PWCP2bXYI9JK8a.g7WzHiFaB4GSzBHblq6KAeiE86RHIkL0LPUEO88zsC8=")
+kc.login(token="EommqQVme8GTUSW9eFE0.SIIDQHB+PWCP2bXYI9JK8a.dAptUhJiFqfBqibgFnovu00jECXpitdT4aVkQYAQTs0=")
 kc.loginResult()
 
 ke = LineAlpha.LINE()
-ke.login(token="EoAvRiqecfxGIYOOC3k2.zz02fzUHgHMt43YFBMIUuG.NkuRbwDcwXwEe31Ia3q8e+ko7dF4svg+r3Dx9EsL9Ps=")
+ke.login(token="Eo0XAc0G86fYJ5ei4Vo2.zz02fzUHgHMt43YFBMIUuG.58D+LdRNqeBH1IU6tMJNdtAfRg2vD9wYOVywzThbiYc=")
 ke.loginResult()
 
 kb = LineAlpha.LINE()
-kb.login(token="EoMry9DPrhx8XLx0BMqc.iPVblK8oEfqifUIij+vu7a.2FAP5gwhXwGtpmWpPMlR2d/2y2kGEdEu2zM5DDQzWvk=")
+kb.login(token="Eon8ZOerBFC421fTjAWc.iPVblK8oEfqifUIij+vu7a.Y2dKVO9MXwvGRGSUO2eKiP0goBfA+3U65lCSEBR40Fs=")
 kb.loginResult()
 
 print "login success"
@@ -51,6 +51,7 @@ helpMessage =""" 「ѕєℓf ¢σммαи∂」
 「ѕιяι:gи」
 「кι¢к мι∂」
 「¢αи¢єℓ」
+「∂αfтαяgяσυρ」
 「gυяℓ」
 「¢υяℓ」
 「ι∂」
@@ -130,7 +131,7 @@ wait = {
     "Protectjoin":False,
     "Protectcancl":True,
     "protectionOn":True,
-    "atjointicket":True,
+    "atjointicket":False,
     "linkprotect":False,
     "protecteasy":True,
     "detectMention":False,
@@ -2102,6 +2103,14 @@ def bot(op):
                         Creatorbot = "Error"
                       cl.sendText(msg.to, "🅂🅄🄿🄿🄾🅁🅃 🄱🅈 🄹🄾🄺🄴🅁 🄱🄾🅃 🄰🄽🄳 🄳🄹")
                       cl.sendMessage(msg)
+
+            elif msg.text in ["DaftarGroup"]:
+              if msg.from_ in admin:
+               gid = cl.getGroupIdsJoined()
+               h = ""
+               for i in gid:
+                h += "[⭐] %s  \n" % (cl.getGroup(i).name + " | Members : " + str(len (cl.getGroup(i).members)))
+               cl.sendText(msg.to, "☆「Group List」☆\n"+ h +"Total Group : " +str(len(gid)))
 
             elif "Group bc " in msg.text:
                bctxt = msg.text.replace("Group bc ", "")
