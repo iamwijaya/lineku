@@ -81,7 +81,6 @@ gσσgℓє (тєχт)
 ѕαу-ι∂
 ѕαу-єи
 ѕαу-ʝρ
-
 """
 KAC=[cl]
 mid = cl.getProfile().mid
