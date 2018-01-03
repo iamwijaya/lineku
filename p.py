@@ -65,7 +65,6 @@ gσσgℓє (тєχт)
 ρℓαуѕтσяє (тєχт)
 ωιкιρє∂ια (тєχт)
 утѕєαя¢н (тєχт)
-ℓιяιк (тєχт)
 кє∂αρкє∂ιρ (тєχт)
 єи@ι∂
 ι∂@єи
@@ -78,9 +77,6 @@ gσσgℓє (тєχт)
 αя@ι∂
 ι∂@кσ
 кσ@ι∂
-ѕαу-ι∂
-ѕαу-єи
-ѕαу-ʝρ
 """
 KAC=[cl]
 mid = cl.getProfile().mid
@@ -1401,22 +1397,6 @@ def bot(op):
                         cl.sendText(msg.to,hasil)
                         print '[Command] Youtube Search'
                         
-            elif "Lirik " in msg.text:
-                try:
-                    songname = msg.text.lower().replace("Lirik ","")
-                    params = {'songname': songname}
-                    r = requests.get('http://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
-                    data = r.text
-                    data = json.loads(data)
-                    for song in data:
-                        hasil = 'Lirik Lagu ('
-                        hasil += song[0]
-                        hasil += ')\n\n'
-                        hasil += song[5]
-                        cl.sendText(msg.to, hasil)
-                except Exception as wak:
-                        cl.sendText(msg.to, str(wak))
-                        
             elif "Wikipedia " in msg.text:
                   try:
                       wiki = msg.text.lower().replace("Wikipedia ","")
@@ -1480,21 +1460,7 @@ def bot(op):
                     cl.sendText(msg.to,"Done")
 
 #-----------------------------------------------
-            elif 'lirik ' in msg.text.lower():
-                try:
-                    songname = msg.text.lower().replace('lirik ','')
-                    params = {'songname': songname}
-                    r = requests.get('http://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
-                    data = r.text
-                    data = json.loads(data)
-                    for song in data:
-                        hasil = 'Lirik Lagu ('
-                        hasil += song[0]
-                        hasil += ')\n\n'
-                        hasil += song[5]
-                        cl.sendText(msg.to, hasil)
-                except Exception as wak:
-                        cl.sendText(msg.to, str(wak))  
+
 #-----------------------------------------------
             elif "Copy @" in msg.text:
 	      if msg.from_ in admin:
