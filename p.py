@@ -105,7 +105,7 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "atjointicket":True,
+    "atjointicket":False,
     "detectMention":False,
     }
 
@@ -540,7 +540,7 @@ def bot(op):
                         data = json.loads(data)
                         if data['status'] == 200:
                             if data['result']['result'] == 100:
-                                cl.sendText(msg.to, "{яeՏρσи Sιмι}\n" + data['result']['response'].encode('utf-8'))
+                                cl.sendText(msg.to, "Respom\n" + data['result']['response'].encode('utf-8'))
 
             if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["detectMention"] == True:
