@@ -16,7 +16,7 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EoYaGSdamgoniMTdjzXd.wB8NjCljtCrIY76m7u8PRq.lc2Cy8MnoP7AHEFCvFHYRnyS2cKtAOMeSNlw0XY8nr0=")
+cl.login(token="EoDK2VcjPWm3sKrU6R0d.wB8NjCljtCrIY76m7u8PRq.ycc8HeEwPEbbTpcErAHmeDZa7LQVw47uj1Fuy8HIr4k=")
 cl.loginResult()
 
 print "login success"
@@ -754,7 +754,7 @@ def bot(op):
             elif "Id" == msg.text:
                 cl.sendText(msg.to,msg.to)
             elif "Mid" == msg.text:
-                cl.sendText(msg.to,mid)
+                cl.sendText(msg.to, msg.from_)
             elif msg.text in ["Mc "]:
                 mmid = msg.text.replace("Mc ","")
                 msg.contentType = 13
@@ -1135,11 +1135,11 @@ def bot(op):
 #==============================================================================#
             elif "Fancytext: " in msg.text:
                 txt = msg.text.replace("Fancytext: ", "")
-                cl.Kedapkedip(msg.to,txt)
+                cl.kedapkedip(msg.to,txt)
                 print "[Command] Kedapkedip"
                 
-            elif "Kedapkedip " in msg.text.lower():
-                txt = msg.text.replace("Kedapkedip ", "")
+            elif "kedapkedip " in msg.text.lower():
+                txt = msg.text.replace("kedapkedip ", "")
                 t1 = "\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xa0\x81\xf4\x80\xa0\x81\xf4\x80\xa0\x81"
                 t2 = "\xf4\x80\x82\xb3\xf4\x8f\xbf\xbf"
                 cl.sendText(msg.to, t1 + txt + t2)
