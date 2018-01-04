@@ -715,7 +715,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
             elif '/ti/g/' in msg.text.lower():
-	      if setting["atjointicket"] == True:
+	      if wait["atjointicket"] == True:
 		link_re = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
 		links = link_re.findall(msg.text)
 		n_links=[]
