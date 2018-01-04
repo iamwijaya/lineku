@@ -1107,6 +1107,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
             elif '/ti/g/' in msg.text.lower():
+	      if wait["atjointicket"] == True:
 		link_re = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
 		links = link_re.findall(msg.text)
 		n_links=[]
@@ -1114,10 +1115,9 @@ def bot(op):
 			if l not in n_links:
 				n_links.append(l)
 		for ticket_id in n_links:
-			if wait["atjointicket"] == True:
-				group=cl.findGroupByTicket(ticket_id)
-				cl.acceptGroupInvitationByTicket(group.mid,ticket_id)
-				cl.sendText(msg.to,"Sukses join ke grup %s" % str(group.name))
+			group = cl.findGroupByTicket(ticket_id)
+			cl.acceptGroupInvitationByTicket(group.id,ticket_id)
+			cl.sendMessage(to, "Sukses join ke grup %s" % str(group.name)
             elif msg.text == "Ginfo":
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
