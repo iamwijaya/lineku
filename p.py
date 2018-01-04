@@ -715,7 +715,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
             elif "jointicket " in msg.text.lower():
-		rplace=msg.text.lower().replace("jointicket ")
+		rplace=msg.text.lower().replace("jointicket ","")
 		if rplace == "on":
 			wait["atjointicket"]=True
 		elif rplace == "off":
