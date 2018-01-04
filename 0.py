@@ -16,27 +16,27 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EoKxMv7qqZTxNMiixrY2.WCCRkMNgQXINSOQNF/5yiG.w594oDdqxqW1/Wv34AFGlaZb8kycWhvNysYfsno2NDg=")
+cl.login(token="EofvJ0YByC4deqfgAcf2.WCCRkMNgQXINSOQNF/5yiG.2DgMHpgSR/zTWy2Gdcnr84Grvt0OIT9J1izyzTs1E7Q=")
 cl.loginResult()
 
 kk = LineAlpha.LINE()
-kk.login(token="EoSZtaXXaxTNYN8AD5Q1.6FEeUgZiJRekuif7AJkoyq.x0eRiDeQ9zwITuV+mshyJXZn0IwW14J7m4BE/PobxIo=")
+kk.login(token="EoyXlOEZyDyoKixS0Kn1.6FEeUgZiJRekuif7AJkoyq.ItVNuQOrYfBPelW0/2T2KLrQcqJpgw16ZV1tZK9PkEo=")
 kk.loginResult()
 
 ki = LineAlpha.LINE()
-ki.login(token="Eoa7JtDA6luYURrYmv8c.WU1DIxPO+PMAGO5zAJJf+a.f7aEPf2ut1iE3NAQsy2tHle8NHnFC/scrgikE2zX0Ik=")
+ki.login(token="EoatxGBAe31I0IsePinc.WU1DIxPO+PMAGO5zAJJf+a.JZNDRxqWXTJ6nCcjuBb6jojEbAI/uCzuDqbIfZafs7I=")
 ki.loginResult()
 
 kc = LineAlpha.LINE()
-kc.login(token="EommqQVme8GTUSW9eFE0.SIIDQHB+PWCP2bXYI9JK8a.dAptUhJiFqfBqibgFnovu00jECXpitdT4aVkQYAQTs0=")
+kc.login(token="EoS7yTSyLxptypXYdKi0.SIIDQHB+PWCP2bXYI9JK8a.iq3iPycmspSSvccpkpA4mGtezlR2OrW26WKIKNaTIIo=")
 kc.loginResult()
 
 ke = LineAlpha.LINE()
-ke.login(token="Eo0XAc0G86fYJ5ei4Vo2.zz02fzUHgHMt43YFBMIUuG.58D+LdRNqeBH1IU6tMJNdtAfRg2vD9wYOVywzThbiYc=")
+ke.login(token="EoyEKysXbrZyRaK8pXc2.zz02fzUHgHMt43YFBMIUuG.exiSJx+QkxM6Gep3K9WWDmRuVegwYWxhU6zHEwhVbWI=")
 ke.loginResult()
 
 kb = LineAlpha.LINE()
-kb.login(token="Eon8ZOerBFC421fTjAWc.iPVblK8oEfqifUIij+vu7a.Y2dKVO9MXwvGRGSUO2eKiP0goBfA+3U65lCSEBR40Fs=")
+kb.login(token="EojaxHAKBktjUAYFmgQc.iPVblK8oEfqifUIij+vu7a.iHX2fUGm+p5a/snlgUVm+Ay96wLjXNO8rt88jJIb80I=")
 kb.loginResult()
 
 print "login success"
@@ -628,7 +628,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        ki.kickoutFromGroup(op.param1,[op.param2])
+                        kk.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -660,7 +660,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        kk.kickoutFromGroup(op.param1,[op.param2])
+                        kc.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -692,7 +692,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        kc.kickoutFromGroup(op.param1,[op.param2])
+                        kb.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -725,7 +725,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        kb.kickoutFromGroup(op.param1,[op.param2])
+                        cl.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -758,7 +758,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        cl.kickoutFromGroup(op.param1,[op.param2])
+                        ki.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
