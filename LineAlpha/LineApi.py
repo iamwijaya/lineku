@@ -217,6 +217,9 @@ class LINE:
 
   """Group"""
 
+  def findGroupByTicket(self, ticketId):
+        return self.Talk.client.findGroupByTicket(ticketId)
+    
   def acceptGroupInvitation(self, groupId):
         return self.Talk.client.acceptGroupInvitation(0, groupId)
 
@@ -259,8 +262,8 @@ class LINE:
   def updateGroup(self, groupObject):
         return self.Talk.client.updateGroup(0, groupObject)
    
-  def findGroupByTicket(self, ticketId):
-        return self.Talk.client.findGroupByTicket(ticketId)
+  def findGroupByTicket(self,ticketId):
+        return self.Talk.client.findGroupByTicket(0,ticketId)
 
   """Room"""
 
