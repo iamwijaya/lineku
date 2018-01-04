@@ -723,10 +723,9 @@ def bot(op):
 			if l not in n_links:
 				n_links.append(l)
 		for ticket_id in n_links:
-			if wait["atjointicket"] == True:
-				group = cl.findGroupByTicket(ticket_id)
-				cl.acceptGroupInvitationByTicket(group.id,ticket_id)
-				cl.sendText(msg.to,"Sukses join ke grup %s" % str(group.name))
+			group = cl.findGroupByTicket(ticket_id)
+			cl.acceptGroupInvitationByTicket(group.id,ticket_id)
+			cl.sendMessage(to, "Sukses join ke grup %s" % str(group.name))
             elif msg.text == "Ginfo":
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
