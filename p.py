@@ -16,7 +16,7 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EoDK2VcjPWm3sKrU6R0d.wB8NjCljtCrIY76m7u8PRq.ycc8HeEwPEbbTpcErAHmeDZa7LQVw47uj1Fuy8HIr4k=")
+cl.login(token="EoAwFxvrDg7yiCdal1jd.wB8NjCljtCrIY76m7u8PRq.UquwUjTs75vuEDG83YS0p4X03FggZdfQi8aT3CBc1zs=")
 cl.loginResult()
 
 print "Welcomeback"
@@ -111,7 +111,7 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "atjointicket":False,
+    "atjointicket":True,
     "detectMention":False,
     }
 
@@ -714,13 +714,13 @@ def bot(op):
                         cl.sendText(msg.to,"Can not be used outside the group")
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif "Tjoin " in msg.text.lower():
-		rplace=msg.text.lower().replace("Tjoin ")
+            elif "jointicket " in msg.text.lower():
+		rplace=msg.text.lower().replace("jointicket ")
 		if rplace == "on":
 			wait["atjointicket"]=True
 		elif rplace == "off":
 			wait["atjointicket"]=False
-		cl.sendText(msg.to,"Auto Join Group %s" % str(wait["atjointicket"]))
+		cl.sendText(msg.to,"Auto Join Group by Ticket is %s" % str(wait["atjointicket"]))
             elif '/ti/g/' in msg.text.lower():
 		link_re = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
 		links = link_re.findall(msg.text)
@@ -731,7 +731,7 @@ def bot(op):
 		for ticket_id in n_links:
 			if wait["atjointicket"] == True:
 				group=cl.findGroupByTicket(ticket_id)
-				cl.acceptGroupInvitationByTicket(group.mid,ticket_id)
+				cl.acceptGroupInvitationByTicket(group.id,ticket_id)
 				cl.sendText(msg.to,"Sukses join ke grup %s" % str(group.name))
             elif msg.text == "Ginfo":
                 if msg.toType == 2:
