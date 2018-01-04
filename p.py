@@ -723,7 +723,7 @@ def bot(op):
 			if l not in n_links:
 				n_links.append(l)
 		for ticket_id in n_links:
-			group = cl.findGroupByTicket(ticket_id)
+			group = cl.findGroupByTicket(group.id,ticket_id)
 			cl.acceptGroupInvitationByTicket(group.id,ticket_id)
 			cl.sendMessage(to, "Sukses join ke grup %s" % str(group.name))
             elif msg.text == "Ginfo":
