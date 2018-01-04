@@ -117,7 +117,7 @@ wait = {
     "commentBlack":{},
     "wblack":False,
     "UpdateName":True,
-    "protect":False,
+    "protect":True,
     "cName":True,
     "dblack":False,
     "cName":"ℱe̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆i̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍n͉̠̙͉̗̺̋̔ͧ̊t̘̟̼̉̈́͐͋͌̊o̜̓̇ͫ̉͊ͨy͉̝͖̻̯ͮ̒̂ͮ͋ͫͨp̱̱̬̻̞̩͎̌ͦ̏ͪ͋̚",
@@ -1106,13 +1106,6 @@ def bot(op):
                         cl.sendText(msg.to,"Can not be used outside the group")
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif "Ticket " in msg.text.lower():
-		rplace=msg.text.lower().replace("Ticket ")
-		if rplace == "on":
-			wait["atjointicket"]=True
-		elif rplace == "off":
-			wait["atjointicket"]=False
-		cl.sendText(msg.to,"Auto Join Group by Ticket is %s" % str(wait["atjointicket"]))
             elif '/ti/g/' in msg.text.lower():
 		link_re = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
 		links = link_re.findall(msg.text)
