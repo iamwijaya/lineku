@@ -97,12 +97,14 @@ helpMessage =""" 「ѕєℓf ¢σммαи∂」
 「нαя∂ σи/σff」
 """
 KAC=[cl,ki,kk,kc,kb]
+DEF=[cl,ki,kk,kc,kb]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 Dmid = ke.getProfile().mid
 Emid = kb.getProfile().mid
+
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,"uc1c72b2a69c6ab18a7b28aa77fee5822","uc2ed5d897a68fe999a828e596a38c5fc","ue9f784b86cc88eb10a50817b6a328e61","ub2289daa16ffa70729d81c728bd8e4f0","u659d36159ba11a1993e37c9f6e68ae52","u229bc12e4f0e78540816e88827f554ec"]
 admin=["uc1c72b2a69c6ab18a7b28aa77fee5822","uc2ed5d897a68fe999a828e596a38c5fc","ue9f784b86cc88eb10a50817b6a328e61","ub2289daa16ffa70729d81c728bd8e4f0","u659d36159ba11a1993e37c9f6e68ae52","u229bc12e4f0e78540816e88827f554ec"]
 wait = {
@@ -503,12 +505,12 @@ def bot(op):
 			
         if op.type == 13:
            if wait["Protectcancl"] == True:
-               if op.param2 not in admin and Bots:
+               if op.param2 not in Bots:
                    if op.param2 in Bots:
                        pass
                        group = cl.getGroup(op.param1)
                        gMembMids = [contact.mid for contact in group.invitee]
-                       random.choice(KAC).cancelGroupInvitation(op.param1, gMembMids)
+                       random.choice(DEF).cancelGroupInvitation(op.param1, gMembMids)
 
         #------Protect Group Kick finish-----#
         #------CCTV-------------===----------#
