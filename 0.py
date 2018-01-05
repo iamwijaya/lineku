@@ -16,27 +16,27 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EofvJ0YByC4deqfgAcf2.WCCRkMNgQXINSOQNF/5yiG.2DgMHpgSR/zTWy2Gdcnr84Grvt0OIT9J1izyzTs1E7Q=")
+cl.login(token="Eo4ucPMq5FqX2Ng5u7k2.WCCRkMNgQXINSOQNF/5yiG.pIWMXHDuEKXJ51Z8AaMUMkA65uBuqeL/hg7rkdRnkF0=")
 cl.loginResult()
 
 kk = LineAlpha.LINE()
-kk.login(token="EoyXlOEZyDyoKixS0Kn1.6FEeUgZiJRekuif7AJkoyq.ItVNuQOrYfBPelW0/2T2KLrQcqJpgw16ZV1tZK9PkEo=")
+kk.login(token="EoN3xSBlhZfpr5jVM6v1.6FEeUgZiJRekuif7AJkoyq.6fIgW+/wc1fl4pmrE3qZoJ2aaFDNbOmAJt/uQFGHz4w=")
 kk.loginResult()
 
 ki = LineAlpha.LINE()
-ki.login(token="EoatxGBAe31I0IsePinc.WU1DIxPO+PMAGO5zAJJf+a.JZNDRxqWXTJ6nCcjuBb6jojEbAI/uCzuDqbIfZafs7I=")
+ki.login(token="EoEG6x1vuErZtiMr4S5c.WU1DIxPO+PMAGO5zAJJf+a.iaISpog6W0W1rZ96+g5dJFZtWfewZVhN/0otvSBLdiw=")
 ki.loginResult()
 
 kc = LineAlpha.LINE()
-kc.login(token="EoS7yTSyLxptypXYdKi0.SIIDQHB+PWCP2bXYI9JK8a.iq3iPycmspSSvccpkpA4mGtezlR2OrW26WKIKNaTIIo=")
+kc.login(token="EoAsFtRd8II0B9GJaz10.SIIDQHB+PWCP2bXYI9JK8a.hIvPf3XFgNDH3dZuOyT/MDpyD7Hy5TD8LF42m5SR6fs=")
 kc.loginResult()
 
 ke = LineAlpha.LINE()
-ke.login(token="EoyEKysXbrZyRaK8pXc2.zz02fzUHgHMt43YFBMIUuG.exiSJx+QkxM6Gep3K9WWDmRuVegwYWxhU6zHEwhVbWI=")
+ke.login(token="EoCrd4HYsE7ghMoJBqL2.zz02fzUHgHMt43YFBMIUuG.JGM/L5VOqAzgEm0TKD3oHnUkkgiTKbLlUgW4TzJc118=")
 ke.loginResult()
 
 kb = LineAlpha.LINE()
-kb.login(token="EojaxHAKBktjUAYFmgQc.iPVblK8oEfqifUIij+vu7a.iHX2fUGm+p5a/snlgUVm+Ay96wLjXNO8rt88jJIb80I=")
+kb.login(token="EoUgWXFluJWASk3oik9c.iPVblK8oEfqifUIij+vu7a.eBJeNoPyAYit4ebvTEIEC9SFDdQF6lmYQbQidPS3ubI=")
 kb.loginResult()
 
 print "login success"
@@ -113,7 +113,6 @@ wait = {
     'autoAdd':False,
     'message':"Hmmm ngeadd",
     "lang":"JP",
-    "commentOn":False,
     "commentBlack":{},
     "wblack":False,
     "UpdateName":True,
@@ -1106,18 +1105,6 @@ def bot(op):
                         cl.sendText(msg.to,"Can not be used outside the group")
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif '/ti/g/' in msg.text.lower():
-	      if wait["atjointicket"] == True:
-		link_re = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
-		links = link_re.findall(msg.text)
-		n_links=[]
-		for l in links:
-			if l not in n_links:
-				n_links.append(l)
-		for ticket_id in n_links:
-			group = cl.findGroupByTicket(ticket_id)
-			cl.acceptGroupInvitationByTicket(group.id,ticket_id)
-			cl.sendMessage(to, "Sukses join ke grup %s" % str(group.name)
             elif msg.text == "Ginfo":
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1493,13 +1480,9 @@ def bot(op):
                         invsend = 0
                         Ticket = cl.reissueGroupTicket(msg.to)
                         ki.acceptGroupInvitationByTicket(msg.to,Ticket)
-          	        time.sleep(0.0000000000000000000000000000000000001)
                         kk.acceptGroupInvitationByTicket(msg.to,Ticket)
-        	        time.sleep(0.0000000000000000000000000000000000001)
                         kc.acceptGroupInvitationByTicket(msg.to,Ticket)
-      	   	        time.sleep(0.0000000000000000000000000000000000001)
                         kb.acceptGroupInvitationByTicket(msg.to,Ticket)
-        	        time.sleep(0.0000000000000000000000000000000000001)
                         G = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
                         ki.updateGroup(G)
@@ -2078,7 +2061,7 @@ def bot(op):
                     except Exception as e:
                         cl.sendText(msg.to, str(e))
 #----------------Commandtambahan----------------------#
-            elif msg.text in ["List group","Glist"]:
+            elif msg.text in ["List group"]:
               if msg.from_ in admin:
                gid = cl.getGroupIdsJoined()
                h = ""
