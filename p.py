@@ -1544,15 +1544,12 @@ def bot(op):
                     _name = msg.text.replace("Admin add @","")
                     _nametarget = _name.rstrip('  ')
                     gs = cl.getGroup(msg.to)
-                    gs = ki.getGroup(msg.to)
-                    gs = kk.getGroup(msg.to)
-                    gs = kc.getGroup(msg.to)
                     targets = []
                     for g in gs.members:
                         if _nametarget == g.displayName:
                             targets.append(g.mid)
                     if targets == []:
-                        ki.sendText(msg.to,"Contact not found")
+                        cl.sendText(msg.to,"Contact not found")
                     else:
                         for target in targets:
                             try:
@@ -1571,15 +1568,12 @@ def bot(op):
                     _name = msg.text.replace("Admin remove @","")
                     _nametarget = _name.rstrip('  ')
                     gs = cl.getGroup(msg.to)
-                    gs = ki.getGroup(msg.to)
-                    gs = kk.getGroup(msg.to)
-                    gs = kc.getGroup(msg.to)
                     targets = []
                     for g in gs.members:
                         if _nametarget == g.displayName:
                             targets.append(g.mid)
                     if targets == []:
-                        ki.sendText(msg.to,"Contact not found")
+                        cl.sendText(msg.to,"Contact not found")
                     else:
                         for target in targets:
                             try:
