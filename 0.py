@@ -130,7 +130,6 @@ wait = {
     "wblacklist":False,
     "dblacklist":False,
     "Protectjoin":False,
-    "Protectcancl":True,
     "protectionOn":True,
     "atjointicket":False,
     "linkprotect":False,
@@ -514,13 +513,8 @@ def bot(op):
                             pass
                         elif wait["inviteprotect"] == True:
                             wait ["blacklist"][op.param2] = True
-                            cl.cancelGroupInvitation(op.param1,[op.param3])
-                            if op.param2 not in Bots:
-                                if op.param2 in Bots:
-                                    pass
-                                elif wait["cancelprotect"] == True:
-                                    wait ["blacklist"][op.param2] = True
-                                    cl.cancelGroupInvitation(op.param1,[op.param3])
+                            random.choice(KAC).cancelGroupInvitation(op.param1,[op.param3])
+
         #------Protect Group Kick finish-----#
         #------CCTV-------------===----------#
         if op.type == 55:
