@@ -114,7 +114,6 @@ wait = {
     'message':"Hmmm ngeadd",
     "lang":"JP",
     "commentBlack":{},
-    "inviteprotect":False,
     "wblack":False,
     "UpdateName":True,
     "protect":True,
@@ -131,6 +130,7 @@ wait = {
     "dblacklist":False,
     "Protectjoin":False,
     "protectionOn":True,
+    "Protectcancl":False,
     "atjointicket":False,
     "linkprotect":False,
     "protecteasy":True,
@@ -502,18 +502,13 @@ def bot(op):
                     cl.updateGroup(G)
 			
         if op.type == 13:
-            if op.param2 not in Bots:
-                if op.param2 in Bots:
-                    pass
-                elif wait["inviteprotect"] == True:
-                    wait ["blacklist"][op.param2] = True
-                    random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                    if op.param2 not in Bots:
-                        if op.param2 in Bots:
-                            pass
-                        elif wait["inviteprotect"] == True:
-                            wait ["blacklist"][op.param2] = True
-                            random.choice(KAC).cancelGroupInvitation(op.param1,[op.param3])
+           if wait["Protectcancl"] == True:
+               if op.param2 not in admin and Bots:
+                   if op.param2 in Bots:
+                       pass
+                       group = ka.getGroup(op.param1)
+                       gMembMids = [contact.mid for contact in group.invitee]
+                       random.choice(DEF).cancelGroupInvitation(op.param1, gMembMids)
 
         #------Protect Group Kick finish-----#
         #------CCTV-------------===----------#
@@ -1212,26 +1207,26 @@ def bot(op):
                         cl.sendText(msg.to,"(・ω・）")
             elif msg.text in ["Invite on","invite on"]:
               if msg.from_ in admin:
-                if wait["inviteprotect"] == True:
-                    if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"ヽ(・∀・)ノ")
-                    else:
-                        cl.sendText(msg.to,"ヽ(・∀・)ノ")
-                else:
-                    wait["inviteprotect"] = True
+                if wait["Protectcancl"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"ヽ(・∀・)ノ")
                     else:
                         cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectcancl"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"ヽ(・∀・)ノ")
+                    else:
+                        cl.sendText(msg.to,"ヽ(・∀・)ノ")
             elif msg.text in ["Invite off","invite off"]:
               if msg.from_ in admin:
-                if wait["inviteprotect"] == False:
+                if wait["Protectcancl"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"(・ω・）")
                     else:
                         cl.sendText(msg.to,"(・ω・）")
                 else:
-                    wait["inviteprotect"] = False
+                    wait["Protectcancl"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"(・ω・）")
                     else:
@@ -1383,7 +1378,7 @@ def bot(op):
                 else: md+=" 「❧¢σитα¢т : (・ω・）」\n"
                 if wait["protect"] == True: md+=" 「❧нαя∂ : ヽ(・∀・)ノ」\n"
                 else: md+=" 「❧нαя∂ : (・ω・）」\n"
-                if wait["inviteprotect"] == True: md+=" 「❧ιиνιтєρяσтє¢т : ヽ(・∀・)ノ」\n"
+                if wait["Protectcancl"] == True: md+=" 「❧ιиνιтєρяσтє¢т : ヽ(・∀・)ノ」\n"
                 else: md+=" 「❧ιиνιтєρяσтє¢т : (・ω・）」\n"
                 if wait["linkprotect"] == True: md+=" 「❧ѕєиѕι : ヽ(・∀・)ノ」\n"
                 else: md+=" 「❧ѕєиѕι : (・ω・）」\n"
