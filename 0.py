@@ -506,9 +506,9 @@ def bot(op):
                if op.param2 not in admin and Bots:
                    if op.param2 in Bots:
                        pass
-                       group = ka.getGroup(op.param1)
+                       group = cl.getGroup(op.param1)
                        gMembMids = [contact.mid for contact in group.invitee]
-                       random.choice(DEF).cancelGroupInvitation(op.param1, gMembMids)
+                       random.choice(KAC).cancelGroupInvitation(op.param1, gMembMids)
 
         #------Protect Group Kick finish-----#
         #------CCTV-------------===----------#
