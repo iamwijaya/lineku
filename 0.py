@@ -130,12 +130,12 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "Protectjoin":False,
-    "Protectcancl":True,
-    "atjointicket":False,
-    "linkprotect":False,
-    "protecteasy":True,
-    "detectMention":False,
+    "Protectjoin":{},
+    "Protectcancl":{},
+    "atjointicket":{},
+    "linkprotect":{},
+    "protecteasy":{},
+    "detectMention":{},
     }
 
 wait2 = {
