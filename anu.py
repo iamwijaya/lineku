@@ -16,28 +16,14 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EoIad4jM1j2nirmkgxu2.WCCRkMNgQXINSOQNF/5yiG.uxZPH2uAUzhbo7BJE/PYi+k3yz6y2Me5t6Z2Te4C1Bc=")
+cl.login(token="EouRlsqcwNIIargKvvt1.G8dT9pYSJ0UVfP09AE3+Cq.ybh2W95Frnw18E/7zVo7HU2CT+jL+oncV/YR5+Y1stw=")
 cl.loginResult()
 
-kk = LineAlpha.LINE()
-kk.login(token="EopU4N0frveI9nKGLVq1.6FEeUgZiJRekuif7AJkoyq.20V1LAqHUSxqw9x21oxpTRnBHY9gi87EBtqdQS8Qx3Y=")
-kk.loginResult()
-
 ki = LineAlpha.LINE()
-ki.login(token="Eoq9cB538eSmsHTuMgyc.WU1DIxPO+PMAGO5zAJJf+a.F1cXA3bjajY15Io5mdLPJLA/rTeSOJCrhqPawCjf0Ps=")
+ki.login(token="EoL1HbI6vXZvMcNuWTG2.ikFaPrFRvX6yK8sWvZnFmG.TRoESKqoTPKnjgKLyzCpnDyinlakBh4maJdXA/t/VDQ=")
 ki.loginResult()
 
-kc = LineAlpha.LINE()
-kc.login(token="EoIGFUH8P3xLhrUAppi0.SIIDQHB+PWCP2bXYI9JK8a.ey6hf85GfIDO8xKB9g/QkhbZW2/lGdHFYW+jIhg9KW8=")
-kc.loginResult()
-
-ke = LineAlpha.LINE()
-ke.login(token="EozyI6TOOqH8wuw7AL52.zz02fzUHgHMt43YFBMIUuG.pkJaJbtGRJm09zmga+2lk0jtRgNfKI5K06qur2F942c=")
-ke.loginResult()
-
-kb = LineAlpha.LINE()
-kb.login(token="EohZEfBXX5JFEmofuepc.iPVblK8oEfqifUIij+vu7a.71+YfvkiK6hEvPRkDFag1+Iz5zzUm568VucWUNdxaN4=")
-kb.loginResult()
+kk = kc = ke =  = kk
 
 print "login success"
 reload(sys)
@@ -121,7 +107,7 @@ wait = {
     "protect":True,
     "cName":True,
     "dblack":False,
-    "cName":"ℱe̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆i̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍n͉̠̙͉̗̺̋̔ͧ̊t̘̟̼̉̈́͐͋͌̊o̜̓̇ͫ̉͊ͨy͉̝͖̻̯ͮ̒̂ͮ͋ͫͨp̱̱̬̻̞̩͎̌ͦ̏ͪ͋̚",
+    "cName":"A̘̫͈̭͌͛͌̇̇̍d̥̝̮͙͈͂̐̇ͮ̏̔̀̚ͅe̮̟͈̣̖̰̩̹͈̾ͨ̑͑l͕͖͉̭̰ͬ̍ͤ͆̊ͨi̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍",
     "cName2":"ɛҳɬɛཞɱıŋąɬơཞ",
     "cName3":"ɛҳɬɛཞɱıŋąɬơཞ",
     "cName4":"ɛҳɬɛཞɱıŋąɬơཞ",
@@ -1013,18 +999,9 @@ def bot(op):
                 kc.inviteIntoGroup(msg.to,[midd])
             elif msg.text in ["Creator"]:
                 msg.contentType = 13
-                ki.sendText(msg.to, "F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆s̪̭̱̼̼̉̈́ͪ͋̽̚b͎̣̫͈̥̗͒͌̃͑̔̾ͅo̜̓̇ͫ̉͊ͨt̘̟̼̉̈́͐͋͌̊")
+                ki.sendText(msg.to, "A̘̫͈̭͌͛͌̇̇̍d̥̝̮͙͈͂̐̇ͮ̏̔̀̚ͅe̮̟͈̣̖̰̩̹͈̾ͨ̑͑l͕͖͉̭̰ͬ̍ͤ͆̊ͨi̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍")
                 msg.contentMetadata = {'mid': mid}
                 ki.sendMessage(msg)
-                kk.sendText(msg.to, "F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆s̪̭̱̼̼̉̈́ͪ͋̽̚b͎̣̫͈̥̗͒͌̃͑̔̾ͅo̜̓̇ͫ̉͊ͨt̘̟̼̉̈́͐͋͌̊")
-                msg.contentMetadata = {'mid': mid}
-                kk.sendMessage(msg)
-                kc.sendText(msg.to, "F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆s̪̭̱̼̼̉̈́ͪ͋̽̚b͎̣̫͈̥̗͒͌̃͑̔̾ͅo̜̓̇ͫ̉͊ͨt̘̟̼̉̈́͐͋͌̊")
-                msg.contentMetadata = {'mid': mid}
-                kc.sendMessage(msg)
-                kb.sendText(msg.to, "F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆s̪̭̱̼̼̉̈́ͪ͋̽̚b͎̣̫͈̥̗͒͌̃͑̔̾ͅo̜̓̇ͫ̉͊ͨt̘̟̼̉̈́͐͋͌̊")
-                msg.contentMetadata = {'mid': mid}
-                kb.sendMessage(msg)
             elif msg.text in ["Me"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': mid}
@@ -1476,7 +1453,7 @@ def bot(op):
                                 print rom
                                 chiya += rom[1] + "\n"
 
-                        cl.sendText(msg.to, "❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nα¢тινє яєα∂єяѕ:%s\n\n\n\nραѕѕινє яєα∂єяѕ:\n%s\n\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nιи тнє ℓαѕт ѕєєи ρσιит:\n[%s]\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\n fєяѕвσт" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                        cl.sendText(msg.to, "❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nα¢тινє яєα∂єяѕ:%s\n\n\n\nραѕѕινє яєα∂єяѕ:\n%s\n\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nιи тнє ℓαѕт ѕєєи ρσιит:\n[%s]\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\n A̘̫͈̭͌͛͌̇̇̍d̥̝̮͙͈͂̐̇ͮ̏̔̀̚ͅe̮̟͈̣̖̰̩̹͈̾ͨ̑͑l͕͖͉̭̰ͬ̍ͤ͆̊ͨi̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                         print "ReadPoint Set..."
                         try:
                             del wait2['readPoint'][msg.to]
