@@ -1013,16 +1013,16 @@ def bot(op):
                 kc.inviteIntoGroup(msg.to,[midd])
             elif msg.text in ["Creator"]:
                 msg.contentType = 13
-                ki.sendText(msg.to, "F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆s̪̭̱̼̼̉̈́ͪ͋̽̚b͎̣̫͈̥̗͒͌̃͑̔̾ͅo̜̓̇ͫ̉͊ͨt̘̟̼̉̈́͐͋͌̊")
+                ki.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 ki.sendMessage(msg)
-                kk.sendText(msg.to, "F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆s̪̭̱̼̼̉̈́ͪ͋̽̚b͎̣̫͈̥̗͒͌̃͑̔̾ͅo̜̓̇ͫ̉͊ͨt̘̟̼̉̈́͐͋͌̊")
+                kk.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 kk.sendMessage(msg)
-                kc.sendText(msg.to, "F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆s̪̭̱̼̼̉̈́ͪ͋̽̚b͎̣̫͈̥̗͒͌̃͑̔̾ͅo̜̓̇ͫ̉͊ͨt̘̟̼̉̈́͐͋͌̊")
+                kc.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 kc.sendMessage(msg)
-                kb.sendText(msg.to, "F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆s̪̭̱̼̼̉̈́ͪ͋̽̚b͎̣̫͈̥̗͒͌̃͑̔̾ͅo̜̓̇ͫ̉͊ͨt̘̟̼̉̈́͐͋͌̊")
+                kb.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 kb.sendMessage(msg)
             elif msg.text in ["Me"]:
@@ -1396,7 +1396,7 @@ def bot(op):
                 if wait["leaveRoom"] == True: md+=" 「❧αυтσ ℓєανє : ヽ(・∀・)ノ」\n"
                 else: md+=" 「❧αυтσ ℓєανє : (・ω・）」\n"
                 if wait["autoAdd"] == True: md+=" 「❧αυтσ α∂∂ : ヽ(・∀・)ノ」\n"
-                else:md+=" 「❧αυтσ α∂∂ : (・ω・）」\n"
+                else:md+=" 「❧αυтσ α∂∂ : (・ω・）」"
                 cl.sendText(msg.to,md)
             elif msg.text in ["è‡ªå‹•è¿½åŠ :ã‚ªãƒ³","Add on","Auto add:on","è‡ªå‹•è¿½åŠ ï¼šé–‹"]:
                 if wait["autoAdd"] == True:
@@ -1476,7 +1476,7 @@ def bot(op):
                                 print rom
                                 chiya += rom[1] + "\n"
 
-                        cl.sendText(msg.to, "❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nα¢тινє яєα∂єяѕ:%s\n\n\n\nραѕѕινє яєα∂єяѕ:\n%s\n\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nιи тнє ℓαѕт ѕєєи ρσιит:\n[%s]\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\n fєяѕвσт" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                        cl.sendText(msg.to, "❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nα¢тινє яєα∂єяѕ:%s\n\n\n\nραѕѕινє яєα∂єяѕ:\n%s\n\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nιи тнє ℓαѕт ѕєєи ρσιит:\n[%s]\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\n ɛҳɬɛཞɱıŋąɬơཞ" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                         print "ReadPoint Set..."
                         try:
                             del wait2['readPoint'][msg.to]
@@ -1617,12 +1617,14 @@ def bot(op):
                     for tag in wait["blacklist"]:
                         matched_list+=filter(lambda str: str == tag, gMembMids)
                     if matched_list == []:
+                        ki.sendText(msg.to,"Fuck You")
                         kk.sendText(msg.to,"Fuck You")
                         kc.sendText(msg.to,"Fuck You")
+                        kb.sendText(msg.to,"Fuck You")
                         return
                     for jj in matched_list:
                         try:
-                            klist=[ki,kk,kc,kb]
+                            klist=[cl,ki,kk,kc,kb]
                             kicker=random.choice(klist)
                             kicker.kickoutFromGroup(msg.to,[jj])
                             print (msg.to,[jj])
@@ -1659,12 +1661,12 @@ def bot(op):
                                 kicker=random.choice(klist)
                                 kicker.kickoutFromGroup(msg.to,[target])
                                 print (msg.to,[g.mid])
-                            except:
-                                cl.sendText(msg.to,"Group cleanse")
-                                ki.sendText(msg.to,"Group cleanse")
-                                kk.sendText(msg.to,"Group cleanse")
-                                kc.sendText(msg.to,"Group cleanse")
-                                kb.sendText(msg.to,"Group cleanse")
+                            #except:
+                                #cl.sendText(msg.to,"Group cleanse")
+                                #ki.sendText(msg.to,"Group cleanse")
+                                #kk.sendText(msg.to,"Group cleanse")
+                                #kc.sendText(msg.to,"Group cleanse")
+                                #kb.sendText(msg.to,"Group cleanse")
             elif "Nk " in msg.text:
                   if msg.from_ in admin:
                        nk0 = msg.text.replace("Nk ","")
