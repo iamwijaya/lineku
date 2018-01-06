@@ -94,8 +94,8 @@ helpMessage =""" 「ѕєℓf ¢σммαи∂」
 「ѕυммσи」
 「fяιєи∂ℓιѕт」
 「ℓιѕтgяσυρ」
-「нαя∂ σи/σff」
-"""
+「нαя∂ σи/σff」"""
+
 KAC=[cl,ki,kk,kc,kb]
 DEF=[cl,ki,kk,kc,kb]
 mid = cl.getProfile().mid
@@ -1662,11 +1662,11 @@ def bot(op):
                                 kicker.kickoutFromGroup(msg.to,[target])
                                 print (msg.to,[g.mid])
                             except:
-                                #cl.sendText(msg.to,"Group cleanse")
-                                #ki.sendText(msg.to,"Group cleanse")
-                                #kk.sendText(msg.to,"Group cleanse")
-                                #kc.sendText(msg.to,"Group cleanse")
-                                #kb.sendText(msg.to,"Group cleanse")
+                                cl.sendText(msg.to,"")
+                                ki.sendText(msg.to,"")
+                                kk.sendText(msg.to,"")
+                                kc.sendText(msg.to,"")
+                                kb.sendText(msg.to,"")
             elif "Nk " in msg.text:
                   if msg.from_ in admin:
                        nk0 = msg.text.replace("Nk ","")
