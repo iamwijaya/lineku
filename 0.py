@@ -118,7 +118,7 @@ wait = {
     "commentBlack":{},
     "wblack":False,
     "UpdateName":True,
-    "protect":True,
+    "protect":False,
     "cName":True,
     "dblack":False,
     "cName":"ℱe̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆i̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍n͉̠̙͉̗̺̋̔ͧ̊t̘̟̼̉̈́͐͋͌̊o̜̓̇ͫ̉͊ͨy͉̝͖̻̯ͮ̒̂ͮ͋ͫͨp̱̱̬̻̞̩͎̌ͦ̏ͪ͋̚",
@@ -130,12 +130,12 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "Protectjoin":{},
-    "Protectcancl":{},
-    "atjointicket":{},
-    "linkprotect":{},
-    "protecteasy":{},
-    "detectMention":{},
+    "Protectjoin":False,
+    "Protectcancl":False,
+    "atjointicket":False,
+    "linkprotect":False,
+    "protecteasy":False,
+    "detectMention":False,
     }
 
 wait2 = {
@@ -1781,7 +1781,7 @@ def bot(op):
                                 kb.sendText(msg.to,"Succes ")
                             except:
                                 cl.sendText(msg.to,"Succes ")
-                                cl.sendText(msg.to,"Succes ")
+                                ki.sendText(msg.to,"Succes ")
                                 kk.sendText(msg.to,"Succes ")
                                 kc.sendText(msg.to,"Succes ")
                                 kb.sendText(msg.to,"Succes ")
