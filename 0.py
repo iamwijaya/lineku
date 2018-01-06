@@ -1661,7 +1661,7 @@ def bot(op):
                                 kicker=random.choice(klist)
                                 kicker.kickoutFromGroup(msg.to,[target])
                                 print (msg.to,[g.mid])
-                            #except:
+                            except:
                                 #cl.sendText(msg.to,"Group cleanse")
                                 #ki.sendText(msg.to,"Group cleanse")
                                 #kk.sendText(msg.to,"Group cleanse")
@@ -2231,7 +2231,7 @@ def bot(op):
 
                 profile = ki.getProfile()
                 profile.displayName = wait["cName2"]
-                kk.updateProfile(profile)
+                ki.updateProfile(profile)
 
                 profile = kk.getProfile()
                 profile.displayName = wait["cName3"]
