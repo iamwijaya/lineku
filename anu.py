@@ -16,28 +16,14 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EoIad4jM1j2nirmkgxu2.WCCRkMNgQXINSOQNF/5yiG.uxZPH2uAUzhbo7BJE/PYi+k3yz6y2Me5t6Z2Te4C1Bc=")
+cl.login(token="EodSfySU7AsbPxF3sKg1.G8dT9pYSJ0UVfP09AE3+Cq.VOtXDErV9qSgAvj7Cgg/VSnirAhJxURgh15pU8avDyo=")
 cl.loginResult()
 
-kk = LineAlpha.LINE()
-kk.login(token="EopU4N0frveI9nKGLVq1.6FEeUgZiJRekuif7AJkoyq.20V1LAqHUSxqw9x21oxpTRnBHY9gi87EBtqdQS8Qx3Y=")
-kk.loginResult()
-
 ki = LineAlpha.LINE()
-ki.login(token="Eoq9cB538eSmsHTuMgyc.WU1DIxPO+PMAGO5zAJJf+a.F1cXA3bjajY15Io5mdLPJLA/rTeSOJCrhqPawCjf0Ps=")
+ki.login(token="EoL1HbI6vXZvMcNuWTG2.ikFaPrFRvX6yK8sWvZnFmG.TRoESKqoTPKnjgKLyzCpnDyinlakBh4maJdXA/t/VDQ=")
 ki.loginResult()
 
-kc = LineAlpha.LINE()
-kc.login(token="EoIGFUH8P3xLhrUAppi0.SIIDQHB+PWCP2bXYI9JK8a.ey6hf85GfIDO8xKB9g/QkhbZW2/lGdHFYW+jIhg9KW8=")
-kc.loginResult()
-
-ke = LineAlpha.LINE()
-ke.login(token="EozyI6TOOqH8wuw7AL52.zz02fzUHgHMt43YFBMIUuG.pkJaJbtGRJm09zmga+2lk0jtRgNfKI5K06qur2F942c=")
-ke.loginResult()
-
-kb = LineAlpha.LINE()
-kb.login(token="EohZEfBXX5JFEmofuepc.iPVblK8oEfqifUIij+vu7a.71+YfvkiK6hEvPRkDFag1+Iz5zzUm568VucWUNdxaN4=")
-kb.loginResult()
+kk = kc = ke = kb = ki
 
 print "login success"
 reload(sys)
@@ -119,9 +105,9 @@ wait = {
     "wblack":False,
     "UpdateName":True,
     "protect":True,
-    "cName":True,
+    "cName":False,
     "dblack":False,
-    "cName":"ℱe̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆i̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍n͉̠̙͉̗̺̋̔ͧ̊t̘̟̼̉̈́͐͋͌̊o̜̓̇ͫ̉͊ͨy͉̝͖̻̯ͮ̒̂ͮ͋ͫͨp̱̱̬̻̞̩͎̌ͦ̏ͪ͋̚",
+    "cName":"",
     "cName2":"ɛҳɬɛཞɱıŋąɬơཞ",
     "cName3":"ɛҳɬɛཞɱıŋąɬơཞ",
     "cName4":"ɛҳɬɛཞɱıŋąɬơཞ",
