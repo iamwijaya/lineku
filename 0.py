@@ -19,13 +19,13 @@ cl = LineAlpha.LINE()
 cl.login(token="EoIad4jM1j2nirmkgxu2.WCCRkMNgQXINSOQNF/5yiG.uxZPH2uAUzhbo7BJE/PYi+k3yz6y2Me5t6Z2Te4C1Bc=")
 cl.loginResult()
 
-kk = LineAlpha.LINE()
-kk.login(token="EopU4N0frveI9nKGLVq1.6FEeUgZiJRekuif7AJkoyq.20V1LAqHUSxqw9x21oxpTRnBHY9gi87EBtqdQS8Qx3Y=")
-kk.loginResult()
-
 ki = LineAlpha.LINE()
-ki.login(token="Eoq9cB538eSmsHTuMgyc.WU1DIxPO+PMAGO5zAJJf+a.F1cXA3bjajY15Io5mdLPJLA/rTeSOJCrhqPawCjf0Ps=")
+ki.login(token="EopU4N0frveI9nKGLVq1.6FEeUgZiJRekuif7AJkoyq.20V1LAqHUSxqw9x21oxpTRnBHY9gi87EBtqdQS8Qx3Y=")
 ki.loginResult()
+
+kk = LineAlpha.LINE()
+kk.login(token="Eoq9cB538eSmsHTuMgyc.WU1DIxPO+PMAGO5zAJJf+a.F1cXA3bjajY15Io5mdLPJLA/rTeSOJCrhqPawCjf0Ps=")
+kk.loginResult()
 
 kc = LineAlpha.LINE()
 kc.login(token="EoIGFUH8P3xLhrUAppi0.SIIDQHB+PWCP2bXYI9JK8a.ey6hf85GfIDO8xKB9g/QkhbZW2/lGdHFYW+jIhg9KW8=")
