@@ -2222,6 +2222,29 @@ def bot(op):
                     cl.sendText(msg.to, "Group Creator : " + gCreator1)
                     cl.sendMessage(msg)
 #-----------------------------------------------
+            elif "Removechat" in msg.text.lower():
+	      if msg.from_ in admin:
+                    try:
+		 	ki.removeAllMessages(op.param2)
+			print "[Command] Remove Chat"
+			ki.sendText(msg.to,"Done")
+		 	kk.removeAllMessages(op.param2)
+			print "[Command] Remove Chat"
+			kk.sendText(msg.to,"Done")
+		 	kc.removeAllMessages(op.param2)
+			print "[Command] Remove Chat"
+			kc.sendText(msg.to,"Done")
+		 	kb.removeAllMessages(op.param2)
+			print "[Command] Remove Chat"
+			kb.sendText(msg.to,"Done")
+		    except Exception as error:
+			print eror
+			ki.sendText(msg.to,"EROR")
+			kk.sendText(msg.to,"EROR")
+			kc.sendText(msg.to,"EROR")
+			kb.sendText(msg.to,"EROR")
+
+#======================================================
             elif msg.text in ["Respon","respon"]:
                 ki.sendText(msg.to,"ɛҳɬɛཞɱıŋąɬơཞ")
                 kk.sendText(msg.to,"ɛҳɬɛཞɱıŋąɬơཞ")
