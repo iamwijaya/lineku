@@ -16,27 +16,27 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EoIad4jM1j2nirmkgxu2.WCCRkMNgQXINSOQNF/5yiG.uxZPH2uAUzhbo7BJE/PYi+k3yz6y2Me5t6Z2Te4C1Bc=")
+cl.login(token="EoeSvQ44E7zrdSdq6AG2.WCCRkMNgQXINSOQNF/5yiG.6sIs+ok0P73yXMWh9aVDEJmPAZDhmjVFpjAfkslLKdM")
 cl.loginResult()
 
 ki = LineAlpha.LINE()
-ki.login(token="EopU4N0frveI9nKGLVq1.6FEeUgZiJRekuif7AJkoyq.20V1LAqHUSxqw9x21oxpTRnBHY9gi87EBtqdQS8Qx3Y=")
+ki.login(token="EoyYrly1bm1n8itbk5P1.6FEeUgZiJRekuif7AJkoyq.Pzo4dLsosjbxGquASWAdAjWTdnbrWlZip9ABKeu2t3U=")
 ki.loginResult()
 
 kk = LineAlpha.LINE()
-kk.login(token="Eoq9cB538eSmsHTuMgyc.WU1DIxPO+PMAGO5zAJJf+a.F1cXA3bjajY15Io5mdLPJLA/rTeSOJCrhqPawCjf0Ps=")
+kk.login(token="EoRTxoaS0YPge3Bn5Puc.WU1DIxPO+PMAGO5zAJJf+a.yW5lmpvEdzgMBqRFC0PADfa2n0LId7jlXWo2EM3vUHQ=")
 kk.loginResult()
 
 kc = LineAlpha.LINE()
-kc.login(token="EoIGFUH8P3xLhrUAppi0.SIIDQHB+PWCP2bXYI9JK8a.ey6hf85GfIDO8xKB9g/QkhbZW2/lGdHFYW+jIhg9KW8=")
+kc.login(token="EodsjeRPkh5Yv0kyUET0.SIIDQHB+PWCP2bXYI9JK8a.XT1DjMWRI3jNiAZvKiIVMMWAEhdMm8VdYusoSXP2TeY=")
 kc.loginResult()
 
 ke = LineAlpha.LINE()
-ke.login(token="EozyI6TOOqH8wuw7AL52.zz02fzUHgHMt43YFBMIUuG.pkJaJbtGRJm09zmga+2lk0jtRgNfKI5K06qur2F942c=")
+ke.login(token="Eo76xQ5tTvy6GV1SCSw2.zz02fzUHgHMt43YFBMIUuG.y2cRtoQML0BFWkRs1Mbfimg4SXm+uAdb45XafdpHss8=")
 ke.loginResult()
 
 kb = LineAlpha.LINE()
-kb.login(token="EohZEfBXX5JFEmofuepc.iPVblK8oEfqifUIij+vu7a.71+YfvkiK6hEvPRkDFag1+Iz5zzUm568VucWUNdxaN4=")
+kb.login(token="EoBpqRsWKYCQ9sT3vuac.iPVblK8oEfqifUIij+vu7a.SBnzHNkDkIVTMeE1VkC4GNdiPj79BS+6krDjVtkrIMs=")
 kb.loginResult()
 
 print "login success"
@@ -46,6 +46,7 @@ sys.setdefaultencoding('utf-8')
 helpMessage =""" 「ѕєℓf ¢σммαи∂」
 
 「нєℓρ」
+「υℓтι @」
 「ѕιяι:кι¢к」
 「¢яєαтσя」
 「ѕιяι:gи」
@@ -77,7 +78,6 @@ helpMessage =""" 「ѕєℓf ¢σммαи∂」
 「gєтιиfσ」
 「gєтмι∂ @」
 「яυитιмє」
-「ѕιяι/вує」
 「кιℓℓ」
 「gєтмι∂ @」
 「¢ℓєαиѕє」 
@@ -1511,7 +1511,7 @@ def bot(op):
 
 #-----------------------------------------------
 
-            elif msg.text in ["Siri"]:
+            elif msg.text in ["Wkwk"]:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -1801,6 +1801,20 @@ def bot(op):
                          else:
                                cl.sendText(msg.to, "Out of range! ")
 #-------------------------------------------------------------------#
+            elif ("Ulti " in msg.text):
+                   targets = []
+                   key = eval(msg.contentMetadata["MENTION"])
+                   key["MENTIONEES"] [0] ["M"]
+                   for x in key["MENTIONEES"]:
+                       targets.append(x["M"])
+                   for target in targets:
+                       try:
+                           cl.kickoutFromGroup(msg.to,[target])
+                           cl.inviteIntoGroup(msg.to,[target])
+                           cl.cancelGroupInvitation(msg.to,[target])
+                       except:
+                           cl.sendText(msg.to,"Error")
+
 #========================== FOR COMMAND BOT FINISHED =============================#
             elif "Spam change:" in msg.text:
                 if msg.toType == 2:
