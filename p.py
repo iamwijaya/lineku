@@ -16,7 +16,7 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="")
+cl.login(token="EoxOE5H35eGsyBjXn4Vd.wB8NjCljtCrIY76m7u8PRq.b2c3v6ARYDRhKlPSjV7GnS0gd2ZdaLurhUbbd/PMUGE=")
 cl.loginResult()
 
 print "Welcomeback"
