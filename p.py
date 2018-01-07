@@ -16,7 +16,7 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EoyCPaFyyQzYheyWi1cd.wB8NjCljtCrIY76m7u8PRq.jLZH6LCfhanG5kzeMc73P8oqRaD46L5Hq0lJIYBCzQ8=")
+cl.login(token="")
 cl.loginResult()
 
 print "Welcomeback"
@@ -46,6 +46,7 @@ helpMessage ="""╭════╬♥╬════╮
 ║♪Listteman
 ╰════╬♥╬════╯
 ╭════╬♥╬════╮
+║♛Boom @
 ║♛ѕυммσи
 ║♛gв¢ (тєχт)
 ║♛¢в¢ (тєχт)
@@ -1423,6 +1424,21 @@ def bot(op):
                 msg.contentMetadata = {'mid': "uc1c72b2a69c6ab18a7b28aa77fee5822,'"}
                 cl.sendMessage(msg)
 #-------------------------------------------------------  
+            elif ("Boom " in msg.text):
+              if msg.from_ in admin:
+                   targets = []
+                   key = eval(msg.contentMetadata["MENTION"])
+                   key["MENTIONEES"] [0] ["M"]
+                   for x in key["MENTIONEES"]:
+                       targets.append(x["M"])
+                   for target in targets:
+                       try:
+                           cl.kickoutFromGroup(msg.to,[target])
+                           cl.inviteIntoGroup(msg.to,[target])
+                           cl.cancelGroupInvitation(msg.to,[target])
+                       except:
+                           cl.sendText(msg.to,"Error")
+            
 #-----------------------------------------------
             elif "Playstore " in msg.text.lower():
                     tob = msg.text.lower().replace("Playstore ","")
