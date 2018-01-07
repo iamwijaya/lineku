@@ -1695,7 +1695,7 @@ def bot(op):
             elif "Blacklist @ " in msg.text:
                 _name = msg.text.replace("Blacklist @ ","")
                 _kicktarget = _name.rstrip(' ')
-                gs = ki2.getGroup(msg.to)
+                gs = cl.getGroup(msg.to)
                 targets = []
                 for g in gs.members:
                     if _kicktarget == g.displayName:
@@ -1708,9 +1708,9 @@ def bot(op):
                                     wait["blacklist"][target] = True
                                     f=codecs.open('st2__b.json','w','utf-8')
                                     json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                    k3.sendText(msg.to,"Succes ")
+                                    cl.sendText(msg.to,"Succes ")
                                 except:
-                                    ki.sendText(msg.to,"error")
+                                    cl.sendText(msg.to,"error")
             elif "Ban @" in msg.text:
                 if msg.toType == 2:
                     print "[Ban]ok"
