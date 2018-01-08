@@ -2494,8 +2494,8 @@ def bot(op):
                                 ka.sendText(msg.to,"Admin Dihapus")
                                 ko.sendText(msg.to,"Admin Dihapus")
                                 ku.sendText(msg.to,"Admin Dihapus")
-				except:
-                                pass
+                            except:
+				pass
                     print "[Command]Staff remove executed"
                 else:
                     cl.sendText(msg.to,"Command denied.")
