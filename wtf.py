@@ -52,7 +52,7 @@ ko.login(token="EoiqshsGapcGTSRDBYAf.iC4lfEriEzKXeWEY6lQf+W.ZujHPYHreXFfm6EsiAdJ
 ko.loginResult()
 
 ku = LineAlpha.LINE()
-ku.login(token="EomNzf0YJV5c2z3TiW3f.iC4lfEriEzKXeWEY6lQf+W.0160EBE+Ufp934+3+eneoadGZplklPssnYwskB1BZL4=")
+ku.login(token="EoRSMuvigjIDlQuF8U1f.AzOxSrYUoRO+s8R0wGFDNW.FH9Xz0sdUNH8P2tpW22WI3uxKupTiHaOOk3rwzAVSW0=")
 kb.loginResult()
 
 print "==============login success masdtah=============="
@@ -2764,19 +2764,19 @@ def nameUpdate():
 		
                 profile6 = ks.getProfile()
                 profile6.displayName = wait["cName7"]
-                ks.updateProfile(profile6)
+                ks.updateProfile(profile7)
 		
                 profile6 = ka.getProfile()
                 profile6.displayName = wait["cName8"]
-                ka.updateProfile(profile6)
+                ka.updateProfile(profile8)
 		
                 profile6 = ko.getProfile()
                 profile6.displayName = wait["cName9"]
-                ko.updateProfile(profile6)
+                ko.updateProfile(profile9)
 		
                 profile6 = ku.getProfile()
                 profile6.displayName = wait["cName10"]
-                ku.updateProfile(profile6)
+                ku.updateProfile(profile10)
             time.sleep(600)
         except:
             pass
