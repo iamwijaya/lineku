@@ -41,15 +41,15 @@ kb.loginResult()
 
 ks = LineAlpha.LINE()
 ks.login(token="EoiHZIkJHAnkk2NUDoWb.Y+GAPFJThIZhZk7qpgaJEW.5Ln15nIh/OvN8/tV689tgLnFTZLJwci+W2JbSoATBUg=")
-kb.loginResult()
+ks.loginResult()
 
 ka = LineAlpha.LINE()
 ka.login(token="EofwGxt67xe1lWGN64Xb.9cLvUfhrGJx1lyydmxgBcW.VOjHeURcNAvTROGYf4TpmWiTJeypgvc+IZX2GmIerag=")
-kb.loginResult()
+ka.loginResult()
 
 ko = LineAlpha.LINE()
-ko.login(token="EoHliypbE9dnnOhTQmBf.iC4lfEriEzKXeWEY6lQf+W.MTpV1kyXxbuU9/H8nFGSp5pCIj9nLDd44EvJk20zOyA=")
-kb.loginResult()
+ko.login(token="EoiqshsGapcGTSRDBYAf.iC4lfEriEzKXeWEY6lQf+W.ZujHPYHreXFfm6EsiAdJtsE6my8st39OOr2x+wBynqM=")
+ko.loginResult()
 
 ku = LineAlpha.LINE()
 ku.login(token="EomNzf0YJV5c2z3TiW3f.iC4lfEriEzKXeWEY6lQf+W.0160EBE+Ufp934+3+eneoadGZplklPssnYwskB1BZL4=")
