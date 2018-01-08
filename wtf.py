@@ -16,7 +16,7 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="Eo9dFFukJbVRA4C39ZH2.WCCRkMNgQXINSOQNF/5yiG.pQ2Hj9motQ1Zdwf0pqTjnv9CD3Z2bBi20F5mIW9qBPA=")
+cl.login(token="EoSTRBU0TfBGYd9bBGj2.WCCRkMNgQXINSOQNF/5yiG.OAkQ7odCqdo8HaHXDtg+A+xh7KM71ufd82Zj2fDPDqc=")
 cl.loginResult()
 
 ki = LineAlpha.LINE()
@@ -698,7 +698,7 @@ def bot(op):
                 elif wait["protect"] == True:
                     wait ["blacklist"][op.param2] = True
                     random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                    random.choice(DEF).inviteIntoGroup(op.param1,[op.param2])
+                    random.choice(KAC).inviteIntoGroup(op.param1,[op.param2])
         #---------------------------------#
 
         if op.type == 19:
@@ -750,7 +750,6 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
-
                     X = kc.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     kc.updateGroup(X)
@@ -766,6 +765,7 @@ def bot(op):
                         pass
                     else:
                         wait["blacklist"][op.param2] = True
+			
                 if Bmid in op.param3:
                     if op.param2 in Bots:
                         pass
@@ -782,7 +782,6 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
-
                     X = kb.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     kb.updateGroup(X)
@@ -815,7 +814,6 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
-
                     X = ks.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ks.updateGroup(X)
@@ -848,7 +846,6 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
-
                     X = ka.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ka.updateGroup(X)
@@ -881,7 +878,6 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
-
                     X = ko.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ko.updateGroup(X)
@@ -914,7 +910,6 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
-
                     X = ku.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ku.updateGroup(X)
@@ -947,7 +942,6 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
-
                     X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     cl.updateGroup(X)
@@ -980,7 +974,6 @@ def bot(op):
                             pass
                         else:
                             wait["blacklist"][op.param2] = True
-
                     X = ki.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki.updateGroup(X)
@@ -1326,7 +1319,7 @@ def bot(op):
                     X.preventJoinByTicket = False
                     ki.updateGroup(X)
                     if wait["lang"] == "JP":
-                        ki.sendText(msg.to,"Done Chivas")
+                        ki.sendText(msg.to,"Done")
                     else:
                         ki.sendText(msg.to,"already open")
                 else:
@@ -1865,10 +1858,6 @@ def bot(op):
                         kk.sendText(msg.to,"Fuck You")
                         kc.sendText(msg.to,"Fuck You")
                         kb.sendText(msg.to,"Fuck You")
-                        ks.sendText(msg.to,"Fuck You")
-                        ka.sendText(msg.to,"Fuck You")
-                        ko.sendText(msg.to,"Fuck You")
-                        ku.sendText(msg.to,"Fuck You")
                         return
                     for jj in matched_list:
                         try:
@@ -1917,7 +1906,7 @@ def bot(op):
                     else:
                         for target in targets:
                             try:
-                                klist=[cl,ki,kk,kc,kb]
+                                klist=[cl,ki,kk,kc,kb,ks,ka,ko,ku]
                                 kicker=random.choice(klist)
                                 kicker.kickoutFromGroup(msg.to,[target])
                                 print (msg.to,[g.mid])
@@ -1927,6 +1916,10 @@ def bot(op):
                                 kk.sendText(msg.to,"")
                                 kc.sendText(msg.to,"")
                                 kb.sendText(msg.to,"")
+                                ks.sendText(msg.to,"")
+                                ka.sendText(msg.to,"")
+                                ko.sendText(msg.to,"")
+                                ku.sendText(msg.to,"")
             elif "Nk " in msg.text:
                   if msg.from_ in admin:
                        nk0 = msg.text.replace("Nk ","")
@@ -2101,7 +2094,7 @@ def bot(op):
                        targets.append(x["M"])
                    for target in targets:
                        try:
-                           kb.kickoutFromGroup(msg.to,[target])                           
+                           ku.kickoutFromGroup(msg.to,[target])                           
                        except:
                            cl.sendText(msg.to,"Error")
 
@@ -2544,7 +2537,7 @@ def bot(op):
                 ka.sendText(msg.to,"ɛҳɬɛཞɱıŋąɬơཞ")
                 ko.sendText(msg.to,"ɛҳɬɛཞɱıŋąɬơཞ")
                 ku.sendText(msg.to,"ɛҳɬɛཞɱıŋąɬơཞ")
-		#-----------------------------------------------
+#-----------------------------------------------
 
             elif msg.text in ["Sp","Speed","speed"]:
                 start = time.time()
@@ -2762,20 +2755,20 @@ def nameUpdate():
                 profile6.displayName = wait["cName6"]
                 kb.updateProfile(profile6)
 		
-                profile6 = ks.getProfile()
-                profile6.displayName = wait["cName7"]
+                profile7 = ks.getProfile()
+                profile7.displayName = wait["cName7"]
                 ks.updateProfile(profile7)
 		
-                profile6 = ka.getProfile()
-                profile6.displayName = wait["cName8"]
+                profile8 = ka.getProfile()
+                profile8.displayName = wait["cName8"]
                 ka.updateProfile(profile8)
 		
-                profile6 = ko.getProfile()
-                profile6.displayName = wait["cName9"]
+                profile9 = ko.getProfile()
+                profile9.displayName = wait["cName9"]
                 ko.updateProfile(profile9)
 		
-                profile6 = ku.getProfile()
-                profile6.displayName = wait["cName10"]
+                profile10 = ku.getProfile()
+                profile10.displayName = wait["cName10"]
                 ku.updateProfile(profile10)
             time.sleep(600)
         except:
