@@ -20,42 +20,42 @@ cl.login(token="EoSTRBU0TfBGYd9bBGj2.WCCRkMNgQXINSOQNF/5yiG.OAkQ7odCqdo8HaHXDtg+
 cl.loginResult()
 
 ki = LineAlpha.LINE()
-ki.login(token="EowJR3S5An2hRQG36bTc.iPVblK8oEfqifUIij+vu7a.3cwCgnZp95eXng+0yVuUoaWzJFlYF3uyj+VwcGvSFtc=")
+ki.login(token="EodQMOtsIekgNb9SL8nc.iPVblK8oEfqifUIij+vu7a./1au5vUHAhmiyhDUrSfGVs6X7ZFx97jt7OEmwcUC6CM=")
 ki.loginResult()
 
 kk = LineAlpha.LINE()
-kk.login(token="Eo4fmChuqe7FfZOaxJH2.zz02fzUHgHMt43YFBMIUuG.BulnlAmApLSgC2GiEdWMlwpdGpnHfUCZ/EEMwLERzMs=")
+kk.login(token="Eo6DztjbOl1DYQnCN3Kb.Y+GAPFJThIZhZk7qpgaJEW.zdazXUlNv8jFfteUoE4xR/n7tIsTZu0KN//9tbZ7AXM=")
 kk.loginResult()
 
 kc = LineAlpha.LINE()
-kc.login(token="Eo8FpaOf58W1zrEuZa51.6FEeUgZiJRekuif7AJkoyq.YAfB5b9JUkzJ7wkeBCGP9+wZ4PnvCn3a/XEV0aVjEvU=")
+kc.login(token="EoFy5vQzjCQSXrHQ5BXb.9cLvUfhrGJx1lyydmxgBcW.2STdnVXq+nTjmy+ym/3F+/dzMp/yx4+KLmxKJoIqSb4=")
 kc.loginResult()
 
 ke = LineAlpha.LINE()
-ke.login(token="EoqFTpqRSKJGDWRXJuUc.WU1DIxPO+PMAGO5zAJJf+a.cpzLHttFbnAfkb10XhmcJF6nlPONokC+5oCFY8R44VM=")
+ke.login(token="EoaaRfHB1sKaNucXN5Df.iC4lfEriEzKXeWEY6lQf+W.HsAWSdbR4t9XDi7GmsQuh1FlGQZsewtC3Aa98NVxGbU=")
 ke.loginResult()
 
-kb = LineAlpha.LINE()
-kb.login(token="EoTLHPH5ivaxhoUIC1n0.SIIDQHB+PWCP2bXYI9JK8a.hlnJIZUDmjDWx+PG1cHoTHujc3qC1ESOw4PDZGTi+n0=")
+kb = LineAlpha.LINE() #5
+kb.login(token="EodeGu7ngYZxPmhspyKf.AzOxSrYUoRO+s8R0wGFDNW.BmIR9wXrnlfhoOt3Gdo5FNm5i896nE95EBkf3o8F3nQ=")
 kb.loginResult()
 
 ks = LineAlpha.LINE()
-ks.login(token="EoiHZIkJHAnkk2NUDoWb.Y+GAPFJThIZhZk7qpgaJEW.5Ln15nIh/OvN8/tV689tgLnFTZLJwci+W2JbSoATBUg=")
+ks.login(token="EoXtzqW5ILA2L1rhbQq2.zz02fzUHgHMt43YFBMIUuG.2tpXa8gcsRhMBHhI13mHFod1AErjRBrZsHOB2IbpAVo=")
 ks.loginResult()
 
 ka = LineAlpha.LINE()
-ka.login(token="EofwGxt67xe1lWGN64Xb.9cLvUfhrGJx1lyydmxgBcW.VOjHeURcNAvTROGYf4TpmWiTJeypgvc+IZX2GmIerag=")
+ka.login(token="Eo8iduypzM9WlzCCPjD1.6FEeUgZiJRekuif7AJkoyq.FlDVMUaPOlD5RYaNrI/9xbE3/tfCul/qcSzCatf4MUE=")
 ka.loginResult()
 
 ko = LineAlpha.LINE()
-ko.login(token="EoiqshsGapcGTSRDBYAf.iC4lfEriEzKXeWEY6lQf+W.ZujHPYHreXFfm6EsiAdJtsE6my8st39OOr2x+wBynqM=")
+ko.login(token="EoAJEJtEs0Nk1Xc5NQpc.WU1DIxPO+PMAGO5zAJJf+a.zsaCIGiciwQHxLJuujE5eeMwttdCR3JuNkfZt+GvjVk=")
 ko.loginResult()
 
 ku = LineAlpha.LINE()
-ku.login(token="EoRSMuvigjIDlQuF8U1f.AzOxSrYUoRO+s8R0wGFDNW.FH9Xz0sdUNH8P2tpW22WI3uxKupTiHaOOk3rwzAVSW0=")
+ku.login(token="EoRTFAeO7pu66GpPouZ0.SIIDQHB+PWCP2bXYI9JK8a.2cINdc17CgAG1qO+Sf6NHMdovpT2UGtRetu0c77MugA=")
 kb.loginResult()
 
-print "==============login success masdtah=============="
+print "==============login success mastah==============\n WELCOME TO MY BOT REGARDS @FERIANTOYP"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
