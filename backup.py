@@ -55,7 +55,7 @@ ku = LineAlpha.LINE()
 ku.login(token="EoRTFAeO7pu66GpPouZ0.SIIDQHB+PWCP2bXYI9JK8a.2cINdc17CgAG1qO+Sf6NHMdovpT2UGtRetu0c77MugA=")
 kb.loginResult()
 
-print "==============login success mastah==============\n WELCOME TO MY BOT REGARDS @FERIANTOYP"
+print "==============login success mastah==============\n   WELCOME TO MY BOT REGARDS @FERIANTOYP"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -71,6 +71,7 @@ helpMessage =""" 「ѕєℓf ¢σммαи∂」
 「∂αfтαяgяσυρ」
 「gυяℓ」
 「¢υяℓ」
+「кαѕαякι¢к σи/σff」
 「ι∂」
 「мι∂」
 「м¢ мι∂」 
@@ -134,6 +135,8 @@ wait = {
     'leaveRoom':False,
     'autoAdd':False,
     'message':"Hmmm ngeadd",
+    "lonte":False,
+    "kickMention":False,
     "lang":"JP",
     "commentBlack":{},
     "wblack":False,
@@ -514,6 +517,7 @@ def bot(op):
                     ke.acceptGroupInvitationByTicket(op.param1,Ticket)
                     ke.kickoutFromGroup(op.param1,[op.param2])
                     cl.updateGroup(G)
+		    ke.sendText(msg.to,"招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")
 		    ke.leaveGroup(op.param1)
 			
         if op.type == 11:
@@ -533,7 +537,7 @@ def bot(op):
                        pass
                        group = cl.getGroup(op.param1)
                        gMembMids = [contact.mid for contact in group.invitee]
-                       random.choice(DEF).cancelGroupInvitation(op.param1, gMembMids)
+                       kk.cancelGroupInvitation(op.param1, gMembMids)
 
         #------Protect Group Kick finish-----#
         #------CCTV-------------===----------#
@@ -699,7 +703,20 @@ def bot(op):
                 elif wait["protect"] == True:
                     wait ["blacklist"][op.param2] = True
                     kk.kickoutFromGroup(op.param1,[op.param2])
-                    kk.sendText(msg.to,"招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")
+              	    G = kk.getGroup(op.param1)
+              	    G.preventJoinByTicket = True
+                    Ticket = kk.reissueGroupTicket(op.param1)
+                    cl.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ks.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ko.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ku.acceptGroupInvitationByTicket(op.param1,Ticket)
+		    ku.updateGroup(G)
+		    ku.sendText(msg.to,"招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")
+
         #---------------------------------#
 
         if op.type == 19:
@@ -753,7 +770,7 @@ def bot(op):
                             wait["blacklist"][op.param2] = True
                     X = kc.getGroup(op.param1)
                     X.preventJoinByTicket = False
-                    kc.updateGroup(X)
+                    kC.updateGroup(X)
                     Ti = kc.reissueGroupTicket(op.param1)
                     ki.acceptGroupInvitationByTicket(op.param1,Ti)
                     G = ki.getGroup(op.param1)
@@ -1004,7 +1021,7 @@ def bot(op):
                         cl.acceptGroupInvitation(op.param1)
                 elif wait["autoCancel"]["on"] == True:
                     if len(G.members) <= wait["autoCancel"]["members"]:
-                        kk.rejectGroupInvitation(op.param1)
+                        cl.rejectGroupInvitation(op.param1)
             else:
                 Inviter = op.param3.replace("",',')
                 InviterX = Inviter.split(",")
@@ -1014,7 +1031,7 @@ def bot(op):
                 if matched_list == []:
                     pass
                 else:
-                    cl.cancelGroupInvitation(op.param1, matched_list)
+                    kk.cancelGroupInvitation(op.param1, matched_list)
         if op.type == 22:
             if wait["leaveRoom"] == True:
                 cl.leaveRoom(op.param1)
@@ -1036,18 +1053,40 @@ def bot(op):
                            if mention['M'] in Bots:
                                   ki.sendText(msg.to,ret_)
                                   break
+				
+            if 'MENTION' in msg.contentMetadata.keys() != None:
+                 if wait["kickMention"] == True:
+                     contact = cl.getContact(msg.from_)
+                     cName = contact.displayName
+                     balas = [cName + "\n 招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)"]
+                     ret_ = random.choice(balas)
+                     name = re.findall(r'@(\w+)', msg.text)
+                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                     mentionees = mention['MENTIONEES']
+                     for mention in mentionees:
+                           if mention['M'] in Bots:
+                                  ki.sendText(msg.to,ret_)
+                                  ki.kickoutFromGroup(msg.to,[msg.from_])
+                                  break
 
             if msg.text in ["Crash", "crash","/crash",".crash","Crasj"]:
                 nganu = ("招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")
                 crot = random.choice(nganu)
-                cl.sendText(msg.to,crot)
-                random.choice(KAC).kickoutFromGroup(msg.to,[msg.from_])
+                ki.sendText(msg.to,crot)
+                kk.kickoutFromGroup(msg.to,[msg.from_])
                 if op.param2 in wait["blacklist"]:
                     pass
                 if op.param2 in wait["whitelist"]:
                     pass
                 else:
                     wait["blacklist"][op.param2] = True
+		
+	    if msg.text in ["anjg","Anjg","Anjing","Anjeng","kntl","Kntl","kontol","Kontol","Memek","mmk","Mmk"]:
+                 if wait["lonte"] == True:
+		     bajingan = ("招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")
+		     ngentot = random.choice(bajingan)
+		     ki.sendText(msg.to,ngentot)
+		     kk.kickoutFromGroup(msg.to,[msg.from_])
 
         if op.type == 25:
             msg = op.message
@@ -1169,20 +1208,6 @@ def bot(op):
                     ki.updateGroup(X)
                 else:
                     ki.sendText(msg.to,"It can't be used besides the group.")
-            elif ("Cv2 gn " in msg.text):
-                if msg.toType == 2:
-                    X = cl.getGroup(msg.to)
-                    X.name = msg.text.replace("Cv2 gn ","")
-                    kk.updateGroup(X)
-                else:
-                    kk.sendText(msg.to,"It can't be used besides the group.")
-            elif ("Cv3 gn " in msg.text):
-                if msg.toType == 2:
-                    X = cl.getGroup(msg.to)
-                    X.name = msg.text.replace("Cv3 gn ","")
-                    kc.updateGroup(X)
-                else:
-                    kc.sendText(msg.to,"It can't be used besides the group.")
             elif "Kick " in msg.text:
                 midd = msg.text.replace("Kick ","")
                 cl.kickoutFromGroup(msg.to,[midd])
@@ -1204,6 +1229,18 @@ def bot(op):
                 cl.sendText(msg.to,"ヽ(・∀・)ノ")
             elif msg.text in ["Respontag off","Autorespon:off","Respon off","Respon:off"]:
                 wait["detectMention"] = False
+                cl.sendText(msg.to,"(・ω・）")
+            elif msg.text in ["Kicktag on"]:
+                wait["kickMention"] = True
+                cl.sendText(msg.to,"ヽ(・∀・)ノ")
+            elif msg.text in ["Kicktag off"]:
+                wait["kickMention"] = False
+                cl.sendText(msg.to,"(・ω・）")
+            elif msg.text in ["Kasarkick on"]:
+                wait["lonte"] = True
+                cl.sendText(msg.to,"ヽ(・∀・)ノ")
+            elif msg.text in ["Kasarkick off"]:
+                wait["lonte"] = False
                 cl.sendText(msg.to,"(・ω・）")
             elif "Siri:invite " in msg.text:
                 midd = msg.text.replace("Siri:invite ","")
@@ -1290,17 +1327,17 @@ def bot(op):
                     X = cl.getGroup(msg.to)
                     if X.invitee is not None:
                         gInviMids = [contact.mid for contact in X.invitee]
-                        cl.cancelGroupInvitation(msg.to, gInviMids)
+                        kk.cancelGroupInvitation(msg.to, gInviMids)
                     else:
                         if wait["lang"] == "JP":
-                            cl.sendText(msg.to,"No one is inviting")
+                            kk.sendText(msg.to,"No one is inviting")
                         else:
-                            cl.sendText(msg.to,"Sorry, nobody absent")
+                            kk.sendText(msg.to,"Sorry, nobody absent")
                 else:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Can not be used outside the group")
+                        kk.sendText(msg.to,"Can not be used outside the group")
                     else:
-                        cl.sendText(msg.to,"Not for use less than group")
+                        kk.sendText(msg.to,"Not for use less than group")
             elif msg.text in ["Gurl"]:
                 if msg.toType == 2:
                     x = cl.getGroup(msg.to)
@@ -1386,7 +1423,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {"mid":mmid}
                 cl.sendMessage(msg)
-            elif msg.text in ["é€£çµ¡å…ˆ:ã‚ªãƒ³","K on","Contact on","é¡¯ç¤ºï¼šé–‹"]:
+            elif msg.text in ["Contact on","é¡¯ç¤ºï¼šé–‹"]:
                 if wait["contact"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"ヽ(・∀・)ノ")
@@ -1609,6 +1646,10 @@ def bot(op):
                 else: md+=" 「❧¢σитα¢т : (・ω・）」\n"
                 if wait["protect"] == True: md+=" 「❧нαя∂ : ヽ(・∀・)ノ」\n"
                 else: md+=" 「❧нαя∂ : (・ω・）」\n"
+                if wait["kickMention"] == True: md+=" 「❧кι¢кмєитισи : ヽ(・∀・)ノ」\n"
+                else: md+=" 「❧кι¢кмєитισи : (・ω・）」\n"
+                if wait["lonte"] == True: md+=" 「❧кαѕαякι¢к : ヽ(・∀・)ノ」\n"
+                else: md+=" 「❧кαѕαякι¢к : (・ω・）」\n"
                 if wait["Protectcancl"] == True: md+=" 「❧¢αи¢єℓρяσтє¢т : ヽ(・∀・)ノ」\n"
                 else: md+=" 「❧¢αи¢єℓρяσтє¢т : (・ω・）」\n"
                 if wait["linkprotect"] == True: md+=" 「❧ѕєиѕι : ヽ(・∀・)ノ」\n"
