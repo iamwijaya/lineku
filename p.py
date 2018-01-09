@@ -92,7 +92,8 @@ helpMessage ="""╭════╬♥╬════╮
 ║☛αя@ι∂ (тєχт)
 ║☛ι∂@кσ (тєχт)
 ║☛кσ@ι∂ (тєχт)
-╰════╬♥╬════╯"""
+╰════╬♥╬════╯
+http://line.me/ti/p/~feriantoyp"""
 KAC=[cl]
 mid = cl.getProfile().mid
 Bots=[mid]
