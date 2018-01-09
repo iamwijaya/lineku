@@ -55,34 +55,41 @@ ku = LineAlpha.LINE()#9
 ku.login(token="EoD1YpYaAjvJvhtFmdX0.SIIDQHB+PWCP2bXYI9JK8a./ZXQy4ojgLAaRvdBco68qN9psueKclAzSiM6P57nD3w=")
 kb.loginResult()
 
-print "==============login success mastah==============\n        WELCOME TO MY BOT REGARDS @FERIANTOYP"
+print "==============login success mastah==============\n     WELCOME TO MY BOT REGARDS @FERIANTOYP"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 helpMessage =""" 「ѕєℓf ¢σммαи∂」
 
-「нєℓρ」
+「нєℓρgяσυρ」
 「υℓтι @」
 「ѕιяι:кι¢к」
 「¢яєαтσя」
-「ѕιяι:gи」
-「кι¢к мι∂」
-「¢αи¢єℓ」
 「∂αfтαяgяσυρ」
-「gυяℓ」
-「¢υяℓ」
-「кαѕαякι¢к σи/σff」
 「ι∂」
 「мι∂」
 「м¢ мι∂」 
 「ιиfσ」
-「g¢αи¢єℓ:σи/σff」
-「ѕαиgєιи: @」
-「мєѕѕαgє ¢нαиgє: тєχт」
-「мєѕѕαgє α∂∂: тєχт」
-「¢σммєит: тєχт α∂∂」
-「gιиfσ」
-「g¢яєαтσя」
+「яυитιмє」
+「ιиѕтαgяαм 」
+「ρяσfιℓєιg 」
+「fяιєи∂ℓιѕт」"""
+
+helpGroup ="""「вαи @」
+「кιℓℓ вαи」 
+「ℓιѕтgяσυρ」
+「¢ℓєαя」
+「яєѕρσи σи/σff」
+「¢ℓєαя вαи」
+「ѕυммσи」
+「нαя∂ σи/σff
+「кιℓℓ」
+「gєтмι∂ @」
+「¢ℓєαиѕє」 
+「ик @」
+「вℓα¢кℓιѕт @」
+「gєтιиfσ」
+「gєтмι∂ @」
 「кι¢ктαg σи/σff」
 「¢σммєит: тєχт」
 「¢σммєит」
@@ -93,26 +100,21 @@ helpMessage =""" 「ѕєℓf ¢σммαи∂」
 「ѕιяι:ιиνιтє」
 「ѕєт」
 「ѕι∂єя」
-「gєтιиfσ」
-「gєтмι∂ @」
-「яυитιмє」
-「кιℓℓ」
-「gєтмι∂ @」
-「¢ℓєαиѕє」 
-「ик @」
-「вℓα¢кℓιѕт @」
-「ιиѕтαgяαм 」
-「ρяσfιℓєιg 」
-「вαи @」
-「кιℓℓ вαи」 
-「¢ℓєαя」
-「ιиνιтє σи/σff」
-「яєѕρσи σи/σff」
-「¢ℓєαя вαи」
-「ѕυммσи」
-「fяιєи∂ℓιѕт」
-「ℓιѕтgяσυρ」
-「нαя∂ σи/σff」"""
+「g¢αи¢єℓ:σи/σff」
+「ѕαиgєιи: @」
+「мєѕѕαgє ¢нαиgє: тєχт」
+「мєѕѕαgє α∂∂: тєχт」
+「¢σммєит: тєχт α∂∂」
+「gιиfσ」
+「g¢яєαтσя」
+「gυяℓ」
+「¢υяℓ」
+「кαѕαякι¢к σи/σff」
+「ѕιяι:gи」
+「кι¢к мι∂」
+「¢αи¢єℓ」
+「υℓтι @」
+「ѕιяι:кι¢к」"""
 
 KAC=[cl,ki,kk,kc,kb,ks,ka,ko,ku]
 DEF=[ki,kk,kc,kb]
@@ -1193,6 +1195,11 @@ def bot(op):
             elif msg.text in ["Help"]:
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,helpMessage)
+                else:
+                    cl.sendText(msg.to,helpt)
+            elif msg.text in ["Helpgroup"]:
+                if wait["lang"] == "JP":
+                    cl.sendText(msg.to,helpGroup)
                 else:
                     cl.sendText(msg.to,helpt)
             elif ("Gn " in msg.text):
