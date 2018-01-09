@@ -15,47 +15,47 @@ from io import StringIO
 from threading import Thread
 
 
-cl = LineAlpha.LINE()
-cl.login(token="EoSTRBU0TfBGYd9bBGj2.WCCRkMNgQXINSOQNF/5yiG.OAkQ7odCqdo8HaHXDtg+A+xh7KM71ufd82Zj2fDPDqc=")
+cl = LineAlpha.LINE() #master
+cl.login(token="EoA55oEX40TYtUMiLgg2.WCCRkMNgQXINSOQNF/5yiG.5ciKCa9FIUvIhxTpJwBxnn9Iw2huk2eHXihSpx6XTa0=")
 cl.loginResult()
 
-ki = LineAlpha.LINE()
-ki.login(token="EodQMOtsIekgNb9SL8nc.iPVblK8oEfqifUIij+vu7a./1au5vUHAhmiyhDUrSfGVs6X7ZFx97jt7OEmwcUC6CM=")
+ki = LineAlpha.LINE() #0
+ki.login(token="EobyzneIJdXJTnOlqgoc.iPVblK8oEfqifUIij+vu7a.CDAmISwgrPtZFOB6JgbkF4UKLvB5MbVfmJt5Y/VnbcM=")
 ki.loginResult()
 
-kk = LineAlpha.LINE()
-kk.login(token="Eo6DztjbOl1DYQnCN3Kb.Y+GAPFJThIZhZk7qpgaJEW.zdazXUlNv8jFfteUoE4xR/n7tIsTZu0KN//9tbZ7AXM=")
+kk = LineAlpha.LINE()#2
+kk.login(token="EoeacX6hpIpiLTEUzsWb.Y+GAPFJThIZhZk7qpgaJEW.6Wx6eX5fdc4U2qwYK4Mk45OfbV4QfVoGZwiCmb86JFs=")
 kk.loginResult()
 
-kc = LineAlpha.LINE()
-kc.login(token="EoFy5vQzjCQSXrHQ5BXb.9cLvUfhrGJx1lyydmxgBcW.2STdnVXq+nTjmy+ym/3F+/dzMp/yx4+KLmxKJoIqSb4=")
+kc = LineAlpha.LINE()#3
+kc.login(token="EobRSsHd3rx2Mfj2A6jb.9cLvUfhrGJx1lyydmxgBcW.ulxpn4+iu5OLB0taHHAgfXtHBwcDD8EWWhn1kWoH/5o=")
 kc.loginResult()
 
-ke = LineAlpha.LINE()
-ke.login(token="EoaaRfHB1sKaNucXN5Df.iC4lfEriEzKXeWEY6lQf+W.HsAWSdbR4t9XDi7GmsQuh1FlGQZsewtC3Aa98NVxGbU=")
+ke = LineAlpha.LINE()#4
+ke.login(token="EolMOcGV4IZodwLDcQzf.iC4lfEriEzKXeWEY6lQf+W.8bE06jI5GdWJPnnvu1Na8pZH66E+SYQ2c6flvT3Ixvo=")
 ke.loginResult()
 
 kb = LineAlpha.LINE() #5
-kb.login(token="EodeGu7ngYZxPmhspyKf.AzOxSrYUoRO+s8R0wGFDNW.BmIR9wXrnlfhoOt3Gdo5FNm5i896nE95EBkf3o8F3nQ=")
+kb.login(token="EovCXHVry3wtuZrNA9xf.AzOxSrYUoRO+s8R0wGFDNW./+Vt6+0k1hGvUSRzOSiYeyWHx3XynZqQumbcBHGErVk=")
 kb.loginResult()
 
-ks = LineAlpha.LINE()
-ks.login(token="EoXtzqW5ILA2L1rhbQq2.zz02fzUHgHMt43YFBMIUuG.2tpXa8gcsRhMBHhI13mHFod1AErjRBrZsHOB2IbpAVo=")
+ks = LineAlpha.LINE()#6
+ks.login(token="EoK2bS6eJBDvpfQZNgv2.zz02fzUHgHMt43YFBMIUuG.kjwWt7GuVVOukVDz4qLRDlJ8/2C6CfT+Gazy/HiIdzA=")
 ks.loginResult()
 
-ka = LineAlpha.LINE()
-ka.login(token="Eo8iduypzM9WlzCCPjD1.6FEeUgZiJRekuif7AJkoyq.FlDVMUaPOlD5RYaNrI/9xbE3/tfCul/qcSzCatf4MUE=")
+ka = LineAlpha.LINE()#7
+ka.login(token="EoS1K7A2bZRQjYwi96N1.6FEeUgZiJRekuif7AJkoyq.Yl2r51+sSWFHjexSLFgx9N1saFiX9X7IvHaeaS8q/HE=")
 ka.loginResult()
 
-ko = LineAlpha.LINE()
-ko.login(token="EoAJEJtEs0Nk1Xc5NQpc.WU1DIxPO+PMAGO5zAJJf+a.zsaCIGiciwQHxLJuujE5eeMwttdCR3JuNkfZt+GvjVk=")
+ko = LineAlpha.LINE()#8
+ko.login(token="EoqVGySCn98Ph0YJGxVc.WU1DIxPO+PMAGO5zAJJf+a.YR5JtpNkORGkkNKdmZb32iPbZBFyy5g2oUvlpXo0GnY=")
 ko.loginResult()
 
-ku = LineAlpha.LINE()
-ku.login(token="EoRTFAeO7pu66GpPouZ0.SIIDQHB+PWCP2bXYI9JK8a.2cINdc17CgAG1qO+Sf6NHMdovpT2UGtRetu0c77MugA=")
+ku = LineAlpha.LINE()#9
+ku.login(token="EoD1YpYaAjvJvhtFmdX0.SIIDQHB+PWCP2bXYI9JK8a./ZXQy4ojgLAaRvdBco68qN9psueKclAzSiM6P57nD3w=")
 kb.loginResult()
 
-print "==============login success mastah==============\n   WELCOME TO MY BOT REGARDS @FERIANTOYP"
+print "==============login success mastah==============\n        WELCOME TO MY BOT REGARDS @FERIANTOYP"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -83,6 +83,7 @@ helpMessage =""" 「ѕєℓf ¢σммαи∂」
 「¢σммєит: тєχт α∂∂」
 「gιиfσ」
 「g¢яєαтσя」
+「кι¢ктαg σи/σff」
 「¢σммєит: тєχт」
 「¢σммєит」
 「¢σммєит вℓ」
@@ -770,7 +771,7 @@ def bot(op):
                             wait["blacklist"][op.param2] = True
                     X = kc.getGroup(op.param1)
                     X.preventJoinByTicket = False
-                    kC.updateGroup(X)
+                    kc.updateGroup(X)
                     Ti = kc.reissueGroupTicket(op.param1)
                     ki.acceptGroupInvitationByTicket(op.param1,Ti)
                     G = ki.getGroup(op.param1)
