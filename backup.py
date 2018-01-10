@@ -1045,20 +1045,15 @@ def bot(op):
         if op.type == 26:
             msg = op.message
             msg.to = msg.from_
-            if 'MENTION' in msg.contentMetadata.keys() != None:
+  	    if 'MENTION' in msg.contentMetadata.keys() != {'mid': mid}:
                  if wait["detectMention"] == True:
-                     contact = cl.getContact(msg.from_)
-                     cName = contact.displayName
-                     balas = ["招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)"]
-                     ret_ = random.choice(balas)
-                     name = re.findall(r'@(\w+)', msg.text)
-                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                     mentionees = mention['MENTIONEES']
-                     for mention in mentionees:
-                           if mention['M'] in Bots:
-                                  ki.sendText(msg.to,cName)
-                                  ki.sendText(msg.to,ret_)
-                                  break
+                     contact = cl.getContact(msg.from_).displayName
+                     xlen = str(len(xname)+1)
+                     msg.contentType = 0
+		     balas = "@"+xname+ "招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)"
+                     msg.text = random.choice(balas)
+                     msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.from_)+'}]}','EMTVER':'4'}
+		     ki.sendMessage(msg)
 				
             if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["kickMention"] == True:
@@ -1309,10 +1304,16 @@ def bot(op):
                 ku.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 ku.sendMessage(msg)
-            elif msg.text in ["Me"]:
-                msg.contentType = 13
-                msg.contentMetadata = {'mid': mid}
-                cl.sendMessage(msg)
+            elif msg.text.lower() == 'me':
+                    msg.contentType = 13
+                    msg.contentMetadata = {'mid': mid}
+                    cl.sendMessage(msg)
+                    xname = cl.getProfile().displayName
+                    xlen = str(len(xname)+1)
+                    msg.contentType = 0
+                    msg.text = "@"+xname+ ""
+                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(mid)+'}]}','EMTVER':'4'}
+                    cl.sendMessage(msg)
             elif "Getmid @" in msg.text:
                 _name = msg.text.replace("Getmid @","")
                 _nametarget = _name.rstrip(' ')
@@ -2322,29 +2323,6 @@ def bot(op):
                         cl.sendMessage(msg)
                         cl.sendMessage(msg)
                         cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        cl.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
-                        ki.sendMessage(msg)
                     else:
                         pass
 
