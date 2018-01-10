@@ -540,9 +540,9 @@ def bot(op):
                 return
             ginfo = cl.getGroup(op.param1)
             contact = cl.getContact(op.param2)
-            image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
+            #image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
             cl.sendText(op.param1,"Hallo " + cl.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\nSemoga Betah Disini")
-            cl.sendImageWithURL(op.param1,image)
+            #cl.sendImageWithURL(op.param1,image)
             print "MEMBER JOIN TO GROUP"
 
         if op.type == 15:
