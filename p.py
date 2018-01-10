@@ -16,7 +16,7 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE()
-cl.login(token="EorUbgkYC6Of8kViVmCd.wB8NjCljtCrIY76m7u8PRq.ZpdUn5w9evvnf01bRLhI6CXycVUXul4nTMW7Ad3bddk=")
+cl.login(token="EovUf7WxzJrUUEY6B3Wd.wB8NjCljtCrIY76m7u8PRq.4U40+iyPrUZ09TmAhCR+RkvnNfP+F4gYwX3tm1/QNQc=")
 cl.loginResult()
 
 print "Welcomeback"
@@ -136,7 +136,11 @@ mimic = {
     "status":False,
     "target":{}
     }
-    
+cctv = {
+    "cyduk":{},
+    "point":{},
+    "sidermem":True
+}
 settings = {
     "simiSimi":{}
     }
@@ -485,19 +489,31 @@ def bot(op):
 
         #------CCTV-------------===----------#
         if op.type == 55:
-          try:
-            if op.param1 in wait2['readPoint']:
-              Name = cl.getContact(op.param2).displayName
-              if Name in wait2['readMember'][op.param1]:
-                 pass
-              else:
-                wait2['readMember'][op.param1] += "\n[•]" + Name
-                wait2['ROM'][op.param1][op.param2] = "[•]" + Name
-            else:
-              cl.sendText
-          except:
-             pass
+                try:
+                    if cctv['cyduk'][op.param1]==True:
+                        if op.param1 in cctv['point']:
+                            Name = cl.getContact(op.param2).displayName
+                            if Name in cctv['sidermem'][op.param1]:
+                                pass
+                            else:
+                                cctv['sidermem'][op.param1] += "\n• " + Name
+                                if " " in Name:
+                                    nick = Name.split(' ')
+                                    if len(nick) == 2:
+                                        cl.sendText(op.param1, "Haii " + "☞ " + nick[0] + " ☜" + "\nNgintip Aja Niih. . .\nChat Kek Idiih (-__-)   ")
+                                    else:
+                                        cl.sendText(op.param1, "Haii " + "☞ " + nick[1] + " ☜" + "\nBetah Banget Jadi Penonton. . .\nChat Napa (-__-)   ")
+                                else:
+                                    cl.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nNgapain Kak Ngintip Aja???\nSini Gabung Chat...   ")
+                        else:
+                            pass
+                    else:
+                        pass
+                except:
+                    pass
 
+        else:
+            pass 
 #---------------------------------------------#
 #---------------------------------------------#
         if op.type == 19:
@@ -662,6 +678,28 @@ def bot(op):
             elif msg.text in ["Simisimi off","Simisimi:off"]:
                 settings["simiSimi"][msg.to] = False
                 cl.sendText(msg.to,"(・ω・）")
+            elif "Sider on" in msg.text:
+	      if msg.from_ in admin:
+                try:
+                    del cctv['point'][msg.to]
+                    del cctv['sidermem'][msg.to]
+                    del cctv['cyduk'][msg.to]
+                except:
+                    pass
+                cctv['point'][msg.to] = msg.id
+                cctv['sidermem'][msg.to] = ""
+                cctv['cyduk'][msg.to]=True
+                wait["Sider"] = True
+                cl.sendText(msg.to,"Siap On Cek Sider")
+                
+            elif "Sider off" in msg.text:
+	      if msg.from_ in admin:
+                if msg.to in cctv['point']:
+                    cctv['cyduk'][msg.to]=False
+                    wait["Sider"] = False
+                    cl.sendText(msg.to, "Cek Sider Off")
+                else:
+                    cl.sendText(msg.to, "Heh Belom Di Set")
             elif msg.text in ["Me"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': msg.from_}
@@ -1127,7 +1165,10 @@ def bot(op):
                   except Exception as error:
                       print error
     #-------------Fungsi Tag All Finish---------------
-
+            elif msg.text in ["Setview","Setpoint","Cctv"]:
+                subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
+                cl.sendText(msg.to, "☆Checkpoint Checked☆")
+                print "Setview"
 #-------------------------------------------------------
 #-------------------------------------------------------
 #==============================================================================#
