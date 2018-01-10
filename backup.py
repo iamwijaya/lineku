@@ -1313,6 +1313,9 @@ def bot(op):
                 msg.contentMetadata = {'mid': mid}
                 cl.sendMessage(msg)
             elif msg.text.lower() == 'Mentionme':
+                    msg.contentType = 13
+                    msg.contentMetadata = {'mid': mid}
+                    cl.sendMessage(msg)
                     xname = cl.getProfile().displayName
                     xlen = str(len(xname)+1)
                     msg.contentType = 0
