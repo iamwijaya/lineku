@@ -138,9 +138,9 @@ mimic = {
     "target":{}
     }
 cctv = {
-    "cyduk":{},
-    "point":{},
-    "sidermem":{}
+    "cyduk":True,
+    "point":True,
+    "sidermem":True
 }
 settings = {
     "simiSimi":{}
