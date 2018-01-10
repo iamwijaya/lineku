@@ -105,6 +105,7 @@ wait = {
     'leaveRoom':True,
     'autoAdd':False,
     'message':"Hmmm ngeadd",
+    "Sider":True,
     "lang":"JP",
     "commentOn":False,
     "commentBlack":{},
@@ -137,9 +138,9 @@ mimic = {
     "target":{}
     }
 cctv = {
-    "cyduk":True,
-    "point":True,
-    "sidermem":True
+    "cyduk":{},
+    "point":{},
+    "sidermem":{}
 }
 settings = {
     "simiSimi":{}
