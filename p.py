@@ -122,8 +122,8 @@ wait = {
     }
 
 wait2 = {
-    'readPoint':{},
-    'readMember':{},
+    'readPoint':True,
+    'readMember':True,
     'setTime':{},
     'ROM':{},
     'copy':True,
@@ -855,60 +855,7 @@ def bot(op):
                         cl.sendText(msg.to,"Value is wrong")
                     else:
                         cl.sendText(msg.to,"Bizarre ratings")
-            elif msg.text in ["Set"]:
-                 if msg.toType == 2:
-                    cl.sendText(msg.to, "(ノ＾ω＾)ハ(＾ω＾ )ノ")
-                    try:
-                        del wait2['readPoint'][msg.to]
-                        del wait2['readMember'][msg.to]
-                    except:
-                        pass
-                    wait2['readPoint'][msg.to] = msg.id
-                    wait2['readMember'][msg.to] = ""
-                    wait2['setTime'][msg.to] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-                    wait2['ROM'][msg.to] = {}
-                    print "set point"
-                    
-            elif msg.text == "Lurking":
-                if msg.toType == 2:
-                    cl.sendText(msg.to, "Set reading point:" + datetime.today().strftime('\n%Y-%m-%d %H:%M:%S'))
-                    try:
-                        del wait2['readPoint'][msg.to]
-                        del wait2['readMember'][msg.to]
-                    except:
-                        pass
-                        wait2['readPoint'][msg.to] = msg.id
-                        wait2['readMember'][msg.to] = ""
-                        wait2['setTime'][msg.to] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-                        wait2['ROM'][msg.to] = {}
-                        print wait2
-                        
-            elif msg.text == "Sider":
-                if msg.toType == 2:
-                    if msg.to in wait2['readPoint']:
-                        if wait2["ROM"][msg.to].items() == []:
-                            chiya = ""
-                        else:
-                            chiya = ""
-                            for rom in wait2["ROM"][msg.to].items():
-                                print rom
-                                chiya += rom[1] + "\n"
 
-                        cl.sendText(msg.to, "❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nα¢тινє яєα∂єяѕ:%s\n\n\n\nραѕѕινє яєα∂єяѕ:\n%s\n\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nιи тнє ℓαѕт ѕєєи ρσιит:\n[%s]\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\n fєяѕвσт" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
-                        print "ReadPoint Set..."
-                        try:
-                            del wait2['readPoint'][msg.to]
-                            del wait2['readMember'][msg.to]
-                        except:
-                            pass
-                        wait2['readPoint'][msg.to] = msg.id
-                        wait2['readMember'][msg.to] = ""
-                        wait2['setTime'][msg.to] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-                        wait2['ROM'][msg.to] = {}
-                        print wait
-                        cl.sendText(msg.to, "Auto set reading point in:" + datetime.today().strftime('\n%Y-%m-%d %H:%M:%S'))
-                    else:
-                        cl.sendText(msg.to, "Reading point has not been set.")
 #-----------------------------------------------
 
             elif msg.text.lower() == 'runtime':
