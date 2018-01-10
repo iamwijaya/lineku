@@ -134,7 +134,7 @@ admin=["u43f99377c8388de7482e5bddd307085c","uc1c72b2a69c6ab18a7b28aa77fee5822","
 wait = {
     'contact':False,
     'autoJoin':False,
-    'autoCancel':{"on":True,"members":1},
+    'auto`':{"on":True,"members":1},
     'leaveRoom':False,
     'autoAdd':False,
     'message':"Hmmm ngeadd",
@@ -1284,40 +1284,26 @@ def bot(op):
                 kc.inviteIntoGroup(msg.to,[midd])
             elif msg.text in ["Creator"]:
                 msg.contentType = 13
-                ki.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 ki.sendMessage(msg)
-                kk.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 kk.sendMessage(msg)
-                kc.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 kc.sendMessage(msg)
-                kb.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 kb.sendMessage(msg)
-                ks.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 ks.sendMessage(msg)
-                ka.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 ka.sendMessage(msg)
-                ko.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 ko.sendMessage(msg)
-                ku.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 ku.sendMessage(msg)
-            elif msg.text.lower() == 'me':
-                    msg.contentType = 13
-                    msg.contentMetadata = {'mid': mid}
-                    cl.sendMessage(msg)
-                    xname = cl.getProfile().displayName
-                    xlen = str(len(xname)+1)
-                    msg.contentType = 0
-                    msg.text = "@"+xname+ ""
-                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.to,mid)+'}]}','EMTVER':'4'}
-                    cl.sendMessage(msg)
+            elif msg.text in ["Me"]:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': mid}
+                cl.sendMessage(msg)
             elif "Getmid @" in msg.text:
                 _name = msg.text.replace("Getmid @","")
                 _nametarget = _name.rstrip(' ')
@@ -1364,14 +1350,14 @@ def bot(op):
                         kk.cancelGroupInvitation(msg.to, gInviMids)
                     else:
                         if wait["lang"] == "JP":
-                            kk.sendText(msg.to,"No one is inviting")
+                            kk.sendText(msg.to,"招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")")
                         else:
-                            kk.sendText(msg.to,"Sorry, nobody absent")
+                            kk.sendText(msg.to,"S招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")")
                 else:
                     if wait["lang"] == "JP":
-                        kk.sendText(msg.to,"Can not be used outside the group")
+                        kk.sendText(msg.to,"招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")")
                     else:
-                        kk.sendText(msg.to,"Not for use less than group")
+                        kk.sendText(msg.to,"招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")")
             elif msg.text in ["Gurl"]:
                 if msg.toType == 2:
                     x = cl.getGroup(msg.to)
@@ -1818,7 +1804,7 @@ def bot(op):
 
 #-----------------------------------------------
 
-            elif msg.text in ["Siri:on"]:
+            elif msg.text in ["."]:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -1900,7 +1886,7 @@ def bot(op):
                 msgs+="\n→→→→→мємвєя←←←←←\n\nTotal Members : %i" % len(group)
                 cl.sendText(msg.to, msgs)
 #-----------------------------------------------
-            elif msg.text in ["Siri:off"]:
+            elif msg.text in [","]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2360,7 +2346,10 @@ def bot(op):
                   except Exception as error:
                       print error
     #-------------Fungsi Tag All Finish---------------#
+
 #-------------------------------------------------------
+	    elif msg.text in ["Mydata"]:
+		cl.sendText(msg.to,["u43f99377c8388de7482e5bddd307085c","uc1c72b2a69c6ab18a7b28aa77fee5822","u229bc12e4f0e78540816e88827f554ec","ucbf81aa5f8ed1e2cc7ccaed03c60237b","u21ce0b15e4487999311307b2e8ba85ff","u699a17b11cae3aba3f4bcaf45a07dd9f","u659d36159ba11a1993e37c9f6e68ae52","ue9f784b86cc88eb10a50817b6a328e61","uc2ed5d897a68fe999a828e596a38c5fc","ub2289daa16ffa70729d81c728bd8e4f0","uf42955b851d18235f52d860331719b0b"])
 #-------------------------------------------------------
 #-------------------------------------------------------
             elif 'Crash' in msg.text:
@@ -2744,11 +2733,11 @@ def bot(op):
                     ku.sendText(msg.to,"Blacklist di usir")
             elif msg.text in ["Clear"]:
                 if msg.toType == 2:
-                    group = cl.getGroup(msg.to)
+                    group = ki.getGroup(msg.to)
                     gMembMids = [contact.mid for contact in group.invitee]
                     for _mid in gMembMids:
-                        cl.cancelGroupInvitation(msg.to,[_mid])
-                    cl.sendText(msg.to,"I pretended to cancel and canceled.")
+                        ki.cancelGroupInvitation(msg.to,[_mid])
+                    ki.sendText(msg.to,"招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")
             elif "random:" in msg.text:
                 if msg.toType == 2:
                     strnum = msg.text.replace("random:","")
