@@ -122,8 +122,8 @@ wait = {
     }
 
 wait2 = {
-    'readPoint':True,
-    'readMember':True,
+    'readPoint':{},
+    'readMember':{},
     'setTime':{},
     'ROM':{},
     'copy':True,
@@ -139,8 +139,8 @@ mimic = {
     }
 cctv = {
     "cyduk":True,
-    "point":True,
-    "sidermem":True
+    "point":{},
+    "sidermem":{}
 }
 settings = {
     "simiSimi":{}
@@ -680,7 +680,6 @@ def bot(op):
                 settings["simiSimi"][msg.to] = False
                 cl.sendText(msg.to,"(・ω・）")
             elif "Sider on" in msg.text:
-	      if msg.from_ in admin:
                 try:
                     del cctv['point'][msg.to]
                     del cctv['sidermem'][msg.to]
@@ -694,7 +693,6 @@ def bot(op):
                 cl.sendText(msg.to,"Siap On Cek Sider")
                 
             elif "Sider off" in msg.text:
-	      if msg.from_ in admin:
                 if msg.to in cctv['point']:
                     cctv['cyduk'][msg.to]=False
                     wait["Sider"] = False
