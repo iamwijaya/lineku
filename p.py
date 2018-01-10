@@ -18,7 +18,7 @@ cl = LineAlpha.LINE()
 cl.login(token="EovUf7WxzJrUUEY6B3Wd.wB8NjCljtCrIY76m7u8PRq.4U40+iyPrUZ09TmAhCR+RkvnNfP+F4gYwX3tm1/QNQc=") 
 cl.loginResult()
 
-print "========Welcome Mastah========\n╭════╬♥╬════╮\nRegards Feriantoyp\n╰════╬♥╬════╯"
+print "==============login success mastah==============\n     WELCOME TO MY BOT REGARDS @FERIANTOYP"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -1713,12 +1713,15 @@ def bot(op):
                       cl.sendText(msg.to, "ℱєяιαитσуρ")
                       cl.sendMessage(msg)
 
-            elif "Gbc " in msg.text:
-	      if msg.from_ in admin:
-               bctxt = msg.text.replace("Gbc ", "")
-               n = cl.getGroupIdsJoined()
-               for manusia in n:
-                  cl.sendText(manusia, (bctxt))
+	    elif "Gbc: " in msg.text:
+		bc = msg.text.replace("Gbc: ","")
+		gid = cl.getGroupIdsJoined()
+		if msg.from_ in admin:
+		    for i in gid:
+			cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~feriantoyp")
+		    cl.sendText(msg.to,"Success BC BosQ")
+		else:
+		    cl.sendText(msg.to,"Khusus Admin")
 			
             elif "Contact bc " in msg.text:
                bctxt = msg.text.replace("Contact bc ", "")
