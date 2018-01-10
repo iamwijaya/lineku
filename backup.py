@@ -1053,7 +1053,13 @@ def bot(op):
 		     balas = "@"+xname+ "招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)"
                      msg.text = random.choice(balas)
                      msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.from_)+'}]}','EMTVER':'4'}
-		     ki.sendMessage(msg)
+                     name = re.findall(r'@(\w+)', msg.text)
+                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                     mentionees = mention['MENTIONEES']
+                     for mention in mentionees:
+                           if mention['M'] in Bots:
+                                  cl.sendText(msg.to,msg.text)
+                                  break
 				
             if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["kickMention"] == True:
@@ -1312,7 +1318,7 @@ def bot(op):
                     xlen = str(len(xname)+1)
                     msg.contentType = 0
                     msg.text = "@"+xname+ ""
-                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(mid)+'}]}','EMTVER':'4'}
+                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.to,mid)+'}]}','EMTVER':'4'}
                     cl.sendMessage(msg)
             elif "Getmid @" in msg.text:
                 _name = msg.text.replace("Getmid @","")
