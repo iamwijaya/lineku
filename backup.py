@@ -1047,18 +1047,16 @@ def bot(op):
             msg.to = msg.from_
   	    if 'MENTION' in msg.contentMetadata.keys() != {'mid': mid}:
                  if wait["detectMention"] == True:
-                     contact = cl.getContact(msg.from_).displayName
-                     xlen = str(len(xname)+1)
-                     msg.contentType = 0
-		     balas = "@"+xname+ "招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)"
-                     msg.text = random.choice(balas)
-                     msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.from_)+'}]}','EMTVER':'4'}
+                     contact = cl.getContact(msg.from_)
+                     cName = contact.displayName
+		     balas = [cName + "招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)"]
+                     ngentot = random.choice(balas)
                      name = re.findall(r'@(\w+)', msg.text)
                      mention = ast.literal_eval(msg.contentMetadata['MENTION'])
                      mentionees = mention['MENTIONEES']
                      for mention in mentionees:
                            if mention['M'] in Bots:
-                                  cl.sendText(msg.to,msg.text)
+                                  ki.sendText(msg.to,ngentot)
                                   break
 				
             if 'MENTION' in msg.contentMetadata.keys() != None:
@@ -1314,11 +1312,12 @@ def bot(op):
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': mid}
                     cl.sendMessage(msg)
+		    hmm = "uc1c72b2a69c6ab18a7b28aa77fee5822"
                     xname = cl.getProfile().displayName
                     xlen = str(len(xname)+1)
                     msg.contentType = 0
                     msg.text = "@"+xname+ ""
-                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.to,mid)+'}]}','EMTVER':'4'}
+                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.to,{'mid' hmm})+'}]}','EMTVER':'4'}
                     cl.sendMessage(msg)
             elif "Getmid @" in msg.text:
                 _name = msg.text.replace("Getmid @","")
