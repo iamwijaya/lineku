@@ -46,6 +46,8 @@ helpMessage ="""╭════╬♥╬════╮
 ║♪Listteman
 ╰════╬♥╬════╯
 ╭════╬♥╬════╮
+║♛FORADMIN♛
+║
 ║♛Boom @
 ║♛ѕυммσи
 ║♛gв¢ (тєχт)
@@ -68,6 +70,7 @@ helpMessage ="""╭════╬♥╬════╮
 ║♣Simisimi σи/σff
 ║♣Micadd @
 ║♣Micdel @
+║♣Sider on/off
 ╰════╬♥╬════╯
 ╭════╬♥╬════╮
 ║☑fb [иαмα]
@@ -129,6 +132,11 @@ wait2 = {
     'target':{},
     'midsTarget':{}
 }
+cctv = {
+    "cyduk":{},
+    "point":{},
+    "sidermem":{}
+}  
 
 mimic = {
     "copy":False,
@@ -498,6 +506,33 @@ def bot(op):
           except:
              pass
 
+
+        if op.type == 55:
+                try:
+                    if cctv['cyduk'][op.param1]==True:
+                        if op.param1 in cctv['point']:
+                            Name = cl.getContact(op.param2).displayName
+                            if Name in cctv['sidermem'][op.param1]:
+                                pass
+                            else:
+                                cctv['sidermem'][op.param1] += "\n• " + Name
+                                if " " in Name:
+                                    nick = Name.split(' ')
+                                    if len(nick) == 2:
+                                        cl.sendText(op.param1, "Haii " + "☞ " + nick[0] + " ☜" + "\nNgintip Aja Niih. . .\nChat Kek Idiih (-__-)   ")
+                                    else:
+                                        cl.sendText(op.param1, "Haii " + "☞ " + nick[1] + " ☜" + "\nBetah Banget Jadi Penonton. . .\nChat Napa (-__-)   ")
+                                else:
+                                    cl.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nNgapain Kak Ngintip Aja???\nSini Gabung Chat...   ")
+                        else:
+                            pass
+                    else:
+                        pass
+                except:
+                    pass
+
+        else:
+            pass
 #---------------------------------------------#
 #---------------------------------------------#
         if op.type == 19:
@@ -659,6 +694,26 @@ def bot(op):
             elif msg.text in ["Simisimi on","Simisimi:on"]:
                 settings["simiSimi"][msg.to] = True
                 cl.sendText(msg.to,"ヽ(・∀・)ノ")
+            elif "Sider on" in msg.text:
+                try:
+                    del cctv['point'][msg.to]
+                    del cctv['sidermem'][msg.to]
+                    del cctv['cyduk'][msg.to]
+                except:
+                    pass
+                cctv['point'][msg.to] = msg.id
+                cctv['sidermem'][msg.to] = ""
+                cctv['cyduk'][msg.to]=True
+                wait["Sider"] = True
+                cl.sendText(msg.to,"Siap On Cek Sider")
+                
+            elif "Sider off" in msg.text:
+                if msg.to in cctv['point']:
+                    cctv['cyduk'][msg.to]=False
+                    wait["Sider"] = False
+                    cl.sendText(msg.to, "Cek Sider Off")
+                else:
+                    cl.sendText(msg.to, "Heh Belom Di Set")
             elif msg.text in ["Simisimi off","Simisimi:off"]:
                 settings["simiSimi"][msg.to] = False
                 cl.sendText(msg.to,"(・ω・）")
