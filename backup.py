@@ -1317,7 +1317,7 @@ def bot(op):
                     xlen = str(len(xname)+1)
                     msg.contentType = 0
                     msg.text = "@"+xname+ ""
-                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.to,{'mid' hmm})+'}]}','EMTVER':'4'}
+                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.to,{'mid': hmm})+'}]}','EMTVER':'4'}
                     cl.sendMessage(msg)
             elif "Getmid @" in msg.text:
                 _name = msg.text.replace("Getmid @","")
