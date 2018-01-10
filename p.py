@@ -95,7 +95,10 @@ helpMessage ="""╭════╬♥╬════╮
 ║☛ι∂@кσ (тєχт)
 ║☛кσ@ι∂ (тєχт)
 ╰════╬♥╬════╯
-http://line.me/ti/p/~feriantoyp"""
+http://line.me/ti/p/~feriantoyp
+BotAutolike , AlwaysRead
+Need admin permanen? Pc creator
+Jangan disalah gunakan , no bayar bayar club"""
 KAC=[cl]
 mid = cl.getProfile().mid
 Bots=[mid]
