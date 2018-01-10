@@ -10,7 +10,6 @@ import tempfile
 import profile
 import urllib
 import urllib2
-from gtts import gTTS
 from io import StringIO
 from threading import Thread
 
@@ -537,7 +536,7 @@ def bot(op):
 #---------------------------------------------#
         if op.type == 17:
           if wait["Sambutan"] == True:
-            if op.param2 in Creator:
+            if op.param2 in Bots:
                 return
             ginfo = cl.getGroup(op.param1)
             contact = cl.getContact(op.param2)
@@ -548,7 +547,7 @@ def bot(op):
 
         if op.type == 15:
           if wait["Sambutan"] == True:
-            if op.param2 in Creator:
+            if op.param2 in Bots:
                 return
             cl.sendText(op.param1,"Hati hati kak " + cl.getContact(op.param2).displayName +  "\nJangan lupa balik ya")
             cl.inviteIntoGroup(op.param1,[op.param2])
