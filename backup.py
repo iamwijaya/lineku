@@ -1308,11 +1308,7 @@ def bot(op):
                 ku.sendText(msg.to, "ɛҳɬɛཞɱıŋąɬơཞ")
                 msg.contentMetadata = {'mid': mid}
                 ku.sendMessage(msg)
-            elif msg.text in ["Me"]:
-                msg.contentType = 13
-                msg.contentMetadata = {'mid': mid}
-                cl.sendMessage(msg)
-            elif msg.text.lower() == 'Mentionme':
+            elif msg.text.lower() == 'Me':
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': mid}
                     cl.sendMessage(msg)
@@ -1320,7 +1316,7 @@ def bot(op):
                     xlen = str(len(xname)+1)
                     msg.contentType = 0
                     msg.text = "@"+xname+ ""
-                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.to,mid)+'}]}','EMTVER':'4'}
+                    msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(msg.to,"uc1c72b2a69c6ab18a7b28aa77fee5822")+'}]}','EMTVER':'4'}
                     cl.sendMessage(msg)
             elif "Getmid @" in msg.text:
                 _name = msg.text.replace("Getmid @","")
