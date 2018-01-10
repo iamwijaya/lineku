@@ -1350,7 +1350,7 @@ def bot(op):
                         kk.cancelGroupInvitation(msg.to, gInviMids)
                     else:
                         if wait["lang"] == "JP":
-                            kk.sendText(msg.to,"招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")")
+                            kk.sendText(msg.to,"Cancelok")
                         else:
                             kk.sendText(msg.to,"S招待されたユーザの中に、ブラックリストユーザとして認識されいる人がいたから、招待を取り消したよ(｀・ω・´)")")
                 else:
