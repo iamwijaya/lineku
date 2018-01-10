@@ -108,6 +108,7 @@ wait = {
     'leaveRoom':True,
     'autoAdd':False,
     'message':"Hmmm ngeadd",
+    "Sambutan":True,
     "lang":"JP",
     "commentOn":False,
     "commentBlack":{},
@@ -534,6 +535,24 @@ def bot(op):
         else:
             pass
 #---------------------------------------------#
+        if op.type == 17:
+          if wait["Sambutan"] == True:
+            if op.param2 in Creator:
+                return
+            ginfo = cl.getGroup(op.param1)
+            contact = cl.getContact(op.param2)
+            image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
+            cl.sendText(op.param1,"Hallo " + cl.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\nSemoga Betah Disini")
+            cl.sendImageWithURL(op.param1,image)
+            print "MEMBER JOIN TO GROUP"
+
+        if op.type == 15:
+          if wait["Sambutan"] == True:
+            if op.param2 in Creator:
+                return
+            cl.sendText(op.param1,"Hati hati kak " + cl.getContact(op.param2).displayName +  "\nJangan lupa balik ya")
+            cl.inviteIntoGroup(op.param1,[op.param2])
+            print "MEMBER HAS LEFT THE GROUP"
 #---------------------------------------------#
         if op.type == 19:
                if op.param2 not in admin and Bots:
