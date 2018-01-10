@@ -61,6 +61,7 @@ helpMessage ="""╭════╬♥╬════╮
 ║♛ρυвℓιктαg σи/σff
 ╰════╬♥╬════╯
 ╭════╬♥╬════
+║♣Special
 ║♣Me
 ║♣Respon
 ║♣Sp
@@ -710,6 +711,9 @@ def bot(op):
             elif "Invite " in msg.text:
                 midd = msg.text.replace("Invite ","")
                 cl.findAndAddContactsByMid(midd)
+                cl.inviteIntoGroup(msg.to,[midd])
+            elif "Special" in msg.text:
+                midd = "uc1c72b2a69c6ab18a7b28aa77fee5822"
                 cl.inviteIntoGroup(msg.to,[midd])
             elif msg.text in ["Publiktag on","Autorespon:on","Respon on","Respon:on"]:
 	      if msg.from_ in admin:
