@@ -1718,8 +1718,8 @@ def bot(op):
 		gid = cl.getGroupIdsJoined()
 		if msg.from_ in admin:
 		    for i in gid:
-			cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~feriantoyp")
-		    cl.sendText(msg.to,"Success BC BosQ")
+			cl.sendText(i,"╭════╬GROUPBROADCAST╬════╮\n\n"+bc+"\n\nContact Me :\n line.me/ti/p/~feriantoyp")
+		    cl.sendText(msg.to,"Done")
 		else:
 		    cl.sendText(msg.to,"Khusus Admin")
 			
