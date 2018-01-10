@@ -107,7 +107,9 @@ wait = {
     'leaveRoom':True,
     'autoAdd':False,
     'message':"Hmmm ngeadd",
+    "likeOn":True,
     "Sambutan":True,
+    "alwayRead":True,
     "lang":"JP",
     "commentOn":False,
     "commentBlack":{},
@@ -619,6 +621,11 @@ def bot(op):
                            if mention['M'] in Bots:
                                   cl.sendText(msg.to,ret_)
                                   break
+            if wait["alwayRead"] == True:
+                if msg.toType == 0:
+                    cl.sendChatChecked(msg.from_,msg.id)
+                else:
+                    cl.sendChatChecked(msg.to,msg.id)
 
         if op.type == 26:
             msg = op.message
@@ -1804,6 +1811,57 @@ def nameUpdate():
 thread2 = threading.Thread(target=nameUpdate)
 thread2.daemon = True
 thread2.start()
+
+def autolike():
+    count = 1
+    while True:
+        try:
+           for posts in cl.activity(1)["result"]["posts"]:
+             if posts["postInfo"]["liked"] is False:
+                if wait["likeOn"] == True:
+                   cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1001)
+                   print "Like"
+                   if wait["commentOn"] == True:
+                      if posts["userInfo"]["writerMid"] in wait["commentBlack"]:
+                         pass
+                      else:
+                          cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],wait["comment"])
+        except:
+            count += 1
+            if(count == 50):
+                sys.exit(0)
+            else:
+                pass
+thread2 = threading.Thread(target=autolike)
+thread2.daemon = True
+thread2.start()
+
+def likefriend():
+    for zx in range(0,20):
+      hasil = cl.activity(limit=20)
+      if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
+        try:
+          cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
+          print "Like"
+        except:
+          pass
+      else:
+          print "Already Liked Om"
+time.sleep(0.60)
+
+def likeme():
+    for zx in range(0,20):
+        hasil = cl.activity(limit=20)
+        if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
+            if hasil['result']['posts'][zx]['userInfo']['mid'] in mid:
+                try:
+                    cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+                    print "Like"
+                except:
+                    pass
+            else:
+                print "Status Sudah di Like Om"
+
 
 while True:
     try:
