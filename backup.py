@@ -16,43 +16,43 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE() #master
-cl.login(token="EoM2AOmpCARwtuYJNnO2.WCCRkMNgQXINSOQNF/5yiG.JVBfvQFMHbb05Z5xMrbzO3+yiZwMvTpxQP3tgM0rGc8=")
+cl.login(token="EowLxBNAEZNogby08K22.WCCRkMNgQXINSOQNF/5yiG.kCIvO8UKv1hfVITwSIhgdSstnUAAE+Dl8JKfalyO8tg=")
 cl.loginResult()
 
 ki = LineAlpha.LINE() #0
-ki.login(token="EowdGVVVoBUe3DdoCSvc.iPVblK8oEfqifUIij+vu7a.JWIeQ4DAm1yEJ3mOyPnZeJHlFMVqlwTyVqkNO9zdSkI=")
+ki.login(token="EogbuW6jl6vuwfdzz5Lc.iPVblK8oEfqifUIij+vu7a.HOskadTB7H3sL89bN/s/k6d6M2THQBeuBeYImRZ9rHg=")
 ki.loginResult()
 
 kk = LineAlpha.LINE()#2
-kk.login(token="Eo4tdNudqCfVryTSFeNb.Y+GAPFJThIZhZk7qpgaJEW.sIt41HUUhRhgM1p7rx/i9V0zpyZxkm+uc/mZDFr739g=")
+kk.login(token="EoCt4g8EaR3n7uu1bDdb.Y+GAPFJThIZhZk7qpgaJEW.myhiPJHcq23w4HjyqwN3hK793BZB79doohaNV/2BwNo=")
 kk.loginResult()
 
 kc = LineAlpha.LINE()#3
-kc.login(token="EoPGwoF8Mduy1aYgZXyb.9cLvUfhrGJx1lyydmxgBcW.+vSRuDldtPD1T/txTknmAti6XwEmeJ28pi/VbvSx3dE")
+kc.login(token="Eom5POHPTIz2itRRfKJb.9cLvUfhrGJx1lyydmxgBcW.Q0q2zeTEvFe3RvXN93Xr6rpQfP3nLxCQMWAjH8DFxUI=")
 kc.loginResult()
 
 ke = LineAlpha.LINE()#4
-ke.login(token="EoUtBYctixLw6r8rC3rf.iC4lfEriEzKXeWEY6lQf+W.yBFV037SHRLmrJWoDhW+iB4advI3MoAIcqYeBkOBJcY=")
+ke.login(token="EoFhaqlKvIAA4aMSSMOf.iC4lfEriEzKXeWEY6lQf+W.UfRUMiWZqHGMuOlpGySHYVx83fTdi00BPNmomsOEfpg=")
 ke.loginResult()
 
 kb = LineAlpha.LINE() #5
-kb.login(token="Eof7o91DaQNS6Yznf8Of.AzOxSrYUoRO+s8R0wGFDNW.RIa+l7yia365IfNKYbNXDAJ9R65q71gEvFMjfFXIvc0=")
+kb.login(token="EoiZAtmoqJIXVe3gxeef.AzOxSrYUoRO+s8R0wGFDNW.HGnFCL8oaEqi1qAFsWPCE8cY8p1On6fJmjgrq8QZirc=")
 kb.loginResult()
 
 ks = LineAlpha.LINE()#6
-ks.login(token="EoAg0Dt5tFxTMuoVRWK2.zz02fzUHgHMt43YFBMIUuG.ZMN14TDShgQ4vZdjHckoLmhO+b3zALqKwfASmAA6hXg=")
+ks.login(token="EosmCOchI9vVxQJNV4k2.zz02fzUHgHMt43YFBMIUuG.ts2q7pkQKfRAt8Tkv9BzL9ZIlblV/TUIJPzAY77/m2I=")
 ks.loginResult()
 
 ka = LineAlpha.LINE()#7
-ka.login(token="Eor9Vq3dLu3jSWKCdhL1.6FEeUgZiJRekuif7AJkoyq.jqDriAKSuabo6qpC+zKw1XrGn78gFCeSYR8u03AHdLM=")
+ka.login(token="EoSgdqvUtfuaI3u0D1m1.6FEeUgZiJRekuif7AJkoyq./oIw5v+LmzVutkkoXsbrA9v4E28jrdAZqKhL8imfG7s=")
 ka.loginResult()
 
 ko = LineAlpha.LINE()#8
-ko.login(token="EoxmGIAkIjW6gHDrM7fc.WU1DIxPO+PMAGO5zAJJf+a.YHuj5+rZdJE8RIe+rGj/ckLLWzicj7ztFBYndiEGYGg=")
+ko.login(token="Eo9Do1emTZKus4jW0BSc.WU1DIxPO+PMAGO5zAJJf+a.pSV2M7jeDfa1ZVR98jBtdoXATBsrTqcd68bIDxFfkkI=")
 ko.loginResult()
 
 ku = LineAlpha.LINE()#9
-ku.login(token="Eo2BbDbF0iRMUAyoxW40.SIIDQHB+PWCP2bXYI9JK8a.mEKbJNVwD8Sc0wedOP3klT19n8Jrsfz3blHVa3gWtyo=")
+ku.login(token="EoS71yTCRaWXWBLVqN10.SIIDQHB+PWCP2bXYI9JK8a.jszF0vhHqiwa/YeAZZTbYCeYARxqmv2I4HaCOduIG6Q=")
 kb.loginResult()
 
 print "==============login success mastah==============\n     WELCOME TO MY BOT REGARDS @FERIANTOYP"
