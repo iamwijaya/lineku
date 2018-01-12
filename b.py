@@ -115,7 +115,7 @@ wait = {
     "UpdateName":True,
     "protect":False,
     "dblack":False,
-    "cName":"PublikBot v10",
+    "cName":"a̘̫͈̭͌͛͌̇̇̍d̥̝̮͙͈͂̐̇ͮ̏̔̀̚ͅi̞̟̫̺ͭ̒ͭͣt̘̟̼̉̈́͐͋͌̊m̘͈̺̪͓̺ͩ͂̾ͪ̀̋a̘̫͈̭͌͛͌̇̇̍d̥̝̮͙͈͂̐̇ͮ̏̔̀̚ͅz̼͖̺̠̰͇̙̓͛ͮͩͦ̎ͦ̑ͅs̪̭̱̼̼̉̈́ͪ͋̽̚",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
