@@ -7,8 +7,8 @@ import requests
 from thrift.transport import THttpClient
 from thrift.protocol import TCompactProtocol
 
-from curve import LineService
-from curve.ttypes import *
+from ..Gen import LineService
+from ..Gen.ttypes import *
 import tempfile
 
 class Channel:
