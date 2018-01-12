@@ -1717,7 +1717,7 @@ def bot(op):
 		gid = cl.getGroupIdsJoined()
 		if msg.from_ in admin:
 		    for i in gid:
-			cl.sendText(i,"╭═══╬GROUPBROADCAST╬═══╮\n\n"+bc")
+			cl.sendText(i,"╭═══╬GROUPBROADCAST╬═══╮\n\n"+bc)
 		    cl.sendText(msg.to,"Done")
 		else:
 		    cl.sendText(msg.to,"Khusus Admin")
