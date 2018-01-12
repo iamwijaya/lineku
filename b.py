@@ -15,17 +15,14 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE() 
-cl.login(token="EozJH1ZdhpMeqSD1dXEd.wB8NjCljtCrIY76m7u8PRq.YNI5cRMAPoOSJTLfu7GDDquvJr6CqUK1cDJTF8AJkwg=") 
+cl.login(token="EoAwEQG3IAeqF0ObbWh5.H0P1aSaOLRlTUZrfWMfDnq.wd+wh3xjuVvwRXcZvfGQntL/jsiyLT+r+JtB624kcRY=") 
 cl.loginResult()
 
 print "==============login success mastah==============\n     WELCOME TO MY BOT REGARDS @FERIANTOYP"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""╭════╬♥╬════╮
-   ♧вσтρυвℓιк♧
-╰════╬♥╬════╯
-╔════════╗
+helpMessage ="""╔════════╗
 ╠═══нєℓρ══╣
 ╚════════╝
 ♛Admin add @
@@ -95,15 +92,12 @@ helpMessage ="""╭════╬♥╬════╮
 ║☛αя@ι∂ (тєχт)
 ║☛ι∂@кσ (тєχт)
 ║☛кσ@ι∂ (тєχт)
-╰════╬♥╬════╯
-AlwaysRead
-Need admin permanen? Pc creator
-Jangan disalah gunakan , no bayar bayar club"""
+╰════╬♥╬════╯"""
 KAC=[cl]
 mid = cl.getProfile().mid
 Bots=[mid]
-admin=["u14e54741ff2aac56c87ac73998563aec","ua7c91cf040367cdd2b143f011b2a7de4","uf15f63d71ad0162c3e791cd3c6efca96","u3a43893bf65289be03f9fd3a85dab2a7","uecf7267c541941fa7adcb85b70d876bd","u02bed31853097ec17a1b6db512169a26","uf594a0ae86c285337ae3f5a116db1aac","ucad303333969352466bfecd62089a1b4","uccd6974ac707566b9b8ba9d29407c246","u72cc08253d5939316af4904f536c2f99","uc34ef1087f001add7ca83b96211177be","ua077ebfd3d38eb6f3c854a603fc48d15","ua113ab1a13a66a8bcb763f8b9aa9e467","uf78a36d680b1129719bd9fafc4ac9709","u23047fe7ba68884c3cf96a3989169f38","u92d15d007bbbc0d2d35a6491cbe2d182","u43f99377c8388de7482e5bddd307085c","uf42955b851d18235f52d860331719b0b","uc1c72b2a69c6ab18a7b28aa77fee5822","u229bc12e4f0e78540816e88827f554ec","ucbf81aa5f8ed1e2cc7ccaed03c60237b","u21ce0b15e4487999311307b2e8ba85ff","u699a17b11cae3aba3f4bcaf45a07dd9f","u659d36159ba11a1993e37c9f6e68ae52","ue9f784b86cc88eb10a50817b6a328e61","uc2ed5d897a68fe999a828e596a38c5fc","ub2289daa16ffa70729d81c728bd8e4f0"]
-owner=["uc1c72b2a69c6ab18a7b28aa77fee5822"]
+admin=[mid]
+owner=[mid]
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -490,7 +484,7 @@ def bot(op):
                     pass
                 else:
                     cl.sendText(op.param1,str(wait["message"]))
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
             if msg.from_ in mimic["target"] and mimic["status"] == True and mimic["target"][msg.from_] == True:
                     text = msg.text
@@ -598,7 +592,7 @@ def bot(op):
         if op.type == 24:
             if wait["leaveRoom"] == True:
                 cl.leaveRoom(op.param1)
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
             msg = op.message
             if msg.to in settings["simiSimi"]:
@@ -631,7 +625,7 @@ def bot(op):
                 else:
                     cl.sendChatChecked(msg.to,msg.id)
 
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
 
 
@@ -641,7 +635,7 @@ def bot(op):
             if msg.contentType == 16:
                 url = msg.contentMetadata("line://home/post?userMid="+mid+"&postId="+"new_post")
                 cl.like(url[25:58], url[66:], likeType=1001)
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
             if msg.contentType == 13:
                if wait["wblack"] == True:
