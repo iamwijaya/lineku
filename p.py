@@ -15,7 +15,7 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE() 
-cl.login(token="EosGvAdx3KnDBmLHPxsd.wB8NjCljtCrIY76m7u8PRq.oWnXLMLrMYU72mIDdS54PHQ1STmJU/5zFXahfjvOGt8=") 
+cl.login(token="EoUuxWH7jk0ESsNRUdDd.wB8NjCljtCrIY76m7u8PRq.eiwUppRLYJDgqMzi1zT1GW73HjubORJSToNIrBPg41o=") 
 cl.loginResult()
 
 print "==============login success mastah==============\n     WELCOME TO MY BOT REGARDS @FERIANTOYP"
