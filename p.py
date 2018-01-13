@@ -916,7 +916,7 @@ def bot(op):
 			
             elif msg.text in ["Setview","Setpoint","Cctv"]:
                 subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
-                nadya.sendText(msg.to, "☆Checkpoint Checked☆")
+                cl.sendText(msg.to, "☆Checkpoint Checked☆")
                 print "Setview"
 
             elif msg.text in ["Viewseen","Check","Ciduk","Cyduk"]:
@@ -942,7 +942,7 @@ def bot(op):
                         except IndexError:
                             conName.append('nones')
                             pass
-                    contactId = nadya.getContacts(recheckData)
+                    contactId = cl.getContacts(recheckData)
                     for v in range(len(recheckData)):
                         dataResult.append(contactId[v].displayName + ' ('+timeSeen[v]+')')
                         pass
@@ -950,11 +950,11 @@ def bot(op):
                         tukang = "╔═════════════════════════\n║         ☆☞ LIST VIEWERS ☜☆\n╠═════════════════════════\n╠➩"
                         grp = '\n╠➩ '.join(str(f) for f in dataResult)
                         total = '\n╠═════════════════════════\n╠➩ Total %i Viewers (%s)' % (len(dataResult), datetime.now().strftime('%H:%M:%S')) + "\n╚═════════════════════════"
-                        nadya.sendText(msg.to, "%s %s %s" % (tukang, grp, total))
+                        cl.sendText(msg.to, "%s %s %s" % (tukang, grp, total))
                         subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
-                        nadya.sendText(msg.to, "☆Auto Checkpoint☆")                        
+                        cl.sendText(msg.to, "☆Auto Checkpoint☆")                        
                     else:
-                        nadya.sendText(msg.to, "☆Belum Ada Viewers☆")
+                        cl.sendText(msg.to, "☆Belum Ada Viewers☆")
                     print "Viewseen"
 #-----------------------------------------------
 
