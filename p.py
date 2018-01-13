@@ -62,6 +62,8 @@ helpMessage ="""╭════╬♥╬════╮
 ╰════╬♥╬════╯
 ╭════╬♥╬════
 ║♣Special
+║♣Like on / off
+║♣Like Friend
 ║♣Me
 ║♣Respon
 ║♣Sp
@@ -102,6 +104,7 @@ Jangan disalah gunakan , no bayar bayar club"""
 KAC=[cl]
 mid = cl.getProfile().mid
 Bots=[mid]
+Owner=["uc1c72b2a69c6ab18a7b28aa77fee5822"]
 admin=["u14e54741ff2aac56c87ac73998563aec","ua7c91cf040367cdd2b143f011b2a7de4","uf15f63d71ad0162c3e791cd3c6efca96","u3a43893bf65289be03f9fd3a85dab2a7","uecf7267c541941fa7adcb85b70d876bd","u02bed31853097ec17a1b6db512169a26","uf594a0ae86c285337ae3f5a116db1aac","ucad303333969352466bfecd62089a1b4","uccd6974ac707566b9b8ba9d29407c246","u72cc08253d5939316af4904f536c2f99","uc34ef1087f001add7ca83b96211177be","ua077ebfd3d38eb6f3c854a603fc48d15","ua113ab1a13a66a8bcb763f8b9aa9e467","uf78a36d680b1129719bd9fafc4ac9709","u23047fe7ba68884c3cf96a3989169f38","u92d15d007bbbc0d2d35a6491cbe2d182","u43f99377c8388de7482e5bddd307085c","uf42955b851d18235f52d860331719b0b","uc1c72b2a69c6ab18a7b28aa77fee5822","u229bc12e4f0e78540816e88827f554ec","ucbf81aa5f8ed1e2cc7ccaed03c60237b","u21ce0b15e4487999311307b2e8ba85ff","u699a17b11cae3aba3f4bcaf45a07dd9f","u659d36159ba11a1993e37c9f6e68ae52","ue9f784b86cc88eb10a50817b6a328e61","uc2ed5d897a68fe999a828e596a38c5fc","ub2289daa16ffa70729d81c728bd8e4f0"]
 wait = {
     'contact':False,
@@ -976,6 +979,39 @@ def bot(op):
                 print "@Restart"
 
 #-----------------------------------------------
+            elif msg.text in ["Like:me","Like me"]: #Semua Bot Ngelike Status Akun Utama
+                print "[Command]Like executed"
+                cl.sendText(msg.to,"Like Status Owner")
+                try:
+                  likeme()
+                except:
+                  pass
+                
+            elif msg.text in ["Like:friend","Like friend"]: #Semua Bot Ngelike Status Teman
+                print "[Command]Like executed"
+                cl.sendText(msg.to,"Like Status Teman")
+                try:
+                  likefriend()
+                except:
+                  pass
+            
+            elif msg.text in ["Like:on","Like on"]:
+                if wait["likeOn"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Done")
+                else:
+                    wait["likeOn"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Already")
+                        
+            elif msg.text in ["Like off","Like:off"]:
+                if wait["likeOn"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Done")
+                else:
+                    wait["likeOn"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Already")
 #-----------------------------------------------
             elif msg.text in ["Listteman"]:    
                 contactlist = cl.getAllContactIds()
@@ -1564,7 +1600,7 @@ def bot(op):
 
 #-----------------------------------------------
             elif "Copy @" in msg.text:
-	      if msg.from_ in admin:
+	      if msg.from_ in Owner:
                    print "[COPY] Ok"
                    _name = msg.text.replace("Copy @","")
                    _nametarget = _name.rstrip('  ')
@@ -1584,7 +1620,7 @@ def bot(op):
                                 print e
                                 
             elif msg.text in ["Backup","backup"]:
-                if msg.from_ in admin:
+                if msg.from_ in Owner:
                     try:
                         cl.updateDisplayPicture(backup.pictureStatus)
                         cl.updateProfile(backup)
@@ -1715,7 +1751,7 @@ def bot(op):
 	    elif "Gbc: " in msg.text:
 		bc = msg.text.replace("Gbc: ","")
 		gid = cl.getGroupIdsJoined()
-		if msg.from_ in admin:
+		if msg.from_ in Owner:
 		    for i in gid:
 			cl.sendText(i,"╭═══╬GROUPBROADCAST╬═══╮\n\n"+bc)
 		    cl.sendText(msg.to,"Done")
@@ -1755,7 +1791,7 @@ def bot(op):
 
             elif msg.text in ["Sp","Speed","speed"]:
                 start = time.time()
-                cl.sendText(msg.to, "¢σℓℓє¢тιиg")
+                cl.sendText(msg.to, "「❧¢σℓℓє¢тιиg」")
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 
