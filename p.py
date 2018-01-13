@@ -115,6 +115,7 @@ wait = {
     'message':"Hmmm ngeadd",
     "likeOn":True,
     "Sambutan":True,
+    "Sider":{},
     "alwayRead":True,
     "lang":"JP",
     "commentOn":False,
