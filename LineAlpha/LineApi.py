@@ -104,9 +104,6 @@ class LINE:
 
   def sendMessage(self, messageObject):
         return self.Talk.client.sendMessage(0,messageObject)
-    
-  def removeAllMessages(self, lastMessageId):
-     return self._client.removeAllMessages(0, lastMessageId
 
   def sendText(self, Tomid, text):
         msg = Message()
@@ -180,6 +177,9 @@ class LINE:
 
   def getMessageBoxWrapUpList(self, start, messageBoxCount):
         return self.Talk.client.getMessageBoxWrapUpList(start, messageBoxCount)
+  
+  def removeAllMessages(self, lastMessageId):
+     return self._client.removeAllMessages(0, lastMessageId)
 
   """Contact"""
 
