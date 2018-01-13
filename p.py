@@ -1252,6 +1252,15 @@ def bot(op):
 
 #-------------------------------------------------------
 #-------------------------------------------------------
+            elif "removechat" in msg.text.lower():
+                if msg.from_ in Owner:
+                    try:
+                        cl.removeAllMessages(op.param2)
+                        print "[Command] Remove Chat"
+                        cl.sendText(msg.to,"Done")
+                    except Exception as error:
+                        print error
+                        cl.sendText(msg.to,"Error")
 #==============================================================================#
             elif "Fancytext: " in msg.text:
                 txt = msg.text.replace("Fancytext: ", "")
