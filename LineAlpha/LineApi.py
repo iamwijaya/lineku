@@ -149,7 +149,7 @@ class LINE:
          raise e
 
   def sendEvent(self, messageObject):
-        return self._client.sendEvent(0, messageObject)
+        return self.client.sendEvent(0, messageObject)
 
   def sendChatChecked(self, mid, lastMessageId):
         return self.Talk.client.sendChatChecked(0, mid, lastMessageId)
