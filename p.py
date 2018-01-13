@@ -123,7 +123,7 @@ wait = {
     "UpdateName":True,
     "protect":False,
     "dblack":False,
-    "cName":"Publik69",
+    "cName":"PublikBot v69",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
