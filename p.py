@@ -15,7 +15,7 @@ from threading import Thread
 
 
 cl = LineAlpha.LINE() 
-cl.login(token="EoUuxWH7jk0ESsNRUdDd.wB8NjCljtCrIY76m7u8PRq.eiwUppRLYJDgqMzi1zT1GW73HjubORJSToNIrBPg41o=") 
+cl.login(token="EoOq0VyOhYUy1qzKvcu5.zCqi2/QXZq+wailNIE/ULq.WE1fnH6GRWNgFPCyJQnGWuUNMpNkijr/fkMrPu9k7uM=")
 cl.loginResult()
 
 print "==============login success mastah==============\n     WELCOME TO MY BOT REGARDS @FERIANTOYP"
@@ -515,6 +515,13 @@ def bot(op):
           except:
              pass
 
+        if op.type == 55:
+	    try:
+	      group_id = op.param1
+	      user_id=op.param2
+	      subprocess.Popen('echo "'+ user_id+'|'+str(op.createdTime)+'" >> dataSeen/%s.txt' % group_id, shell=True, stdout=subprocess.PIPE, )
+	    except Exception as e:
+	      print e
 
         if op.type == 55:
                 try:
@@ -906,60 +913,49 @@ def bot(op):
                         cl.sendText(msg.to,"Value is wrong")
                     else:
                         cl.sendText(msg.to,"Bizarre ratings")
-            elif msg.text in ["Set"]:
-                 if msg.toType == 2:
-                    cl.sendText(msg.to, "(ノ＾ω＾)ハ(＾ω＾ )ノ")
-                    try:
-                        del wait2['readPoint'][msg.to]
-                        del wait2['readMember'][msg.to]
-                    except:
-                        pass
-                    wait2['readPoint'][msg.to] = msg.id
-                    wait2['readMember'][msg.to] = ""
-                    wait2['setTime'][msg.to] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-                    wait2['ROM'][msg.to] = {}
-                    print "set point"
-                    
-            elif msg.text == "Lurking":
-                if msg.toType == 2:
-                    cl.sendText(msg.to, "Set reading point:" + datetime.today().strftime('\n%Y-%m-%d %H:%M:%S'))
-                    try:
-                        del wait2['readPoint'][msg.to]
-                        del wait2['readMember'][msg.to]
-                    except:
-                        pass
-                        wait2['readPoint'][msg.to] = msg.id
-                        wait2['readMember'][msg.to] = ""
-                        wait2['setTime'][msg.to] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-                        wait2['ROM'][msg.to] = {}
-                        print wait2
-                        
-            elif msg.text == "Sider":
-                if msg.toType == 2:
-                    if msg.to in wait2['readPoint']:
-                        if wait2["ROM"][msg.to].items() == []:
-                            chiya = ""
-                        else:
-                            chiya = ""
-                            for rom in wait2["ROM"][msg.to].items():
-                                print rom
-                                chiya += rom[1] + "\n"
+			
+            elif msg.text in ["Setview","Setpoint","Cctv"]:
+                subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
+                nadya.sendText(msg.to, "☆Checkpoint Checked☆")
+                print "Setview"
 
-                        cl.sendText(msg.to, "❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nα¢тινє яєα∂єяѕ:%s\n\n\n\nραѕѕινє яєα∂єяѕ:\n%s\n\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\nιи тнє ℓαѕт ѕєєи ρσιит:\n[%s]\n❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧❧\n fєяѕвσт" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
-                        print "ReadPoint Set..."
+            elif msg.text in ["Viewseen","Check","Ciduk","Cyduk"]:
+	        lurkGroup = ""
+	        dataResult, timeSeen, contacts, userList, timelist, recheckData = [], [], [], [], [], []
+                with open('dataSeen/'+msg.to+'.txt','r') as rr:
+                    contactArr = rr.readlines()
+                    for v in xrange(len(contactArr) -1,0,-1):
+                        num = re.sub(r'\n', "", contactArr[v])
+                        contacts.append(num)
+                        pass
+                    contacts = list(set(contacts))
+                    for z in range(len(contacts)):
+                        arg = contacts[z].split('|')
+                        userList.append(arg[0])
+                        timelist.append(arg[1])
+                    uL = list(set(userList))
+                    for ll in range(len(uL)):
                         try:
-                            del wait2['readPoint'][msg.to]
-                            del wait2['readMember'][msg.to]
-                        except:
+                            getIndexUser = userList.index(uL[ll])
+                            timeSeen.append(time.strftime("%H:%M:%S", time.localtime(int(timelist[getIndexUser]) / 1000)))
+                            recheckData.append(userList[getIndexUser])
+                        except IndexError:
+                            conName.append('nones')
                             pass
-                        wait2['readPoint'][msg.to] = msg.id
-                        wait2['readMember'][msg.to] = ""
-                        wait2['setTime'][msg.to] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-                        wait2['ROM'][msg.to] = {}
-                        print wait
-                        cl.sendText(msg.to, "Auto set reading point in:" + datetime.today().strftime('\n%Y-%m-%d %H:%M:%S'))
+                    contactId = nadya.getContacts(recheckData)
+                    for v in range(len(recheckData)):
+                        dataResult.append(contactId[v].displayName + ' ('+timeSeen[v]+')')
+                        pass
+                    if len(dataResult) > 0:
+                        tukang = "╔═════════════════════════\n║         ☆☞ LIST VIEWERS ☜☆\n╠═════════════════════════\n╠➩"
+                        grp = '\n╠➩ '.join(str(f) for f in dataResult)
+                        total = '\n╠═════════════════════════\n╠➩ Total %i Viewers (%s)' % (len(dataResult), datetime.now().strftime('%H:%M:%S')) + "\n╚═════════════════════════"
+                        nadya.sendText(msg.to, "%s %s %s" % (tukang, grp, total))
+                        subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
+                        nadya.sendText(msg.to, "☆Auto Checkpoint☆")                        
                     else:
-                        cl.sendText(msg.to, "Reading point has not been set.")
+                        nadya.sendText(msg.to, "☆Belum Ada Viewers☆")
+                    print "Viewseen"
 #-----------------------------------------------
 
             elif msg.text.lower() == 'runtime':
