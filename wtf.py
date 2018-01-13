@@ -693,7 +693,7 @@ def bot(op):
 #---------------------------------------------#
         if op.type == 19:
             if op.param2 not in Bots:
-                elif wait["protect"] == True:
+                if wait["protect"] == True:
                     wait ["blacklist"][op.param2] = True
                     random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
         #---------------------------------#
