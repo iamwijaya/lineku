@@ -105,7 +105,7 @@ class LINE:
   def sendMessage(self, messageObject):
         return self.Talk.client.sendMessage(0,messageObject)
     
-def removeAllMessages(self, lastMessageId):
+  def removeAllMessages(self, lastMessageId):
      return self._client.removeAllMessages(0, lastMessageId
 
   def sendText(self, Tomid, text):
