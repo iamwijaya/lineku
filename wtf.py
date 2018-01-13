@@ -15,47 +15,47 @@ from io import StringIO
 from threading import Thread
 
 
-cl = LineAlpha.LINE()
-cl.login(token="EoSTRBU0TfBGYd9bBGj2.WCCRkMNgQXINSOQNF/5yiG.OAkQ7odCqdo8HaHXDtg+A+xh7KM71ufd82Zj2fDPDqc=")
+cl = LineAlpha.LINE() #master
+cl.login(token="EopqKeTwHWIqNODurfG2.WCCRkMNgQXINSOQNF/5yiG.xHCmXcJujniz4rl5yuer+Zu0/sxJJ5/UJWGX+nse5ic=")
 cl.loginResult()
 
-ki = LineAlpha.LINE()
-ki.login(token="EodQMOtsIekgNb9SL8nc.iPVblK8oEfqifUIij+vu7a./1au5vUHAhmiyhDUrSfGVs6X7ZFx97jt7OEmwcUC6CM=")
+ki = LineAlpha.LINE() #0
+ki.login(token="Eo6KqIYz3w4jx0jO1vyc.iPVblK8oEfqifUIij+vu7a.fOUwHiTclF5EZo+uaMKD0CaawSpZZpu0F/iyluxSTtQ=")
 ki.loginResult()
 
-kk = LineAlpha.LINE()
-kk.login(token="Eo6DztjbOl1DYQnCN3Kb.Y+GAPFJThIZhZk7qpgaJEW.zdazXUlNv8jFfteUoE4xR/n7tIsTZu0KN//9tbZ7AXM=")
+kk = LineAlpha.LINE()#2
+kk.login(token="EoUueHDLEXdI6sdM20Nb.Y+GAPFJThIZhZk7qpgaJEW.PUGMy+YqrkO0Si9YGr7sIo0DfYr1fSnlRKUx7M9uB7o=")
 kk.loginResult()
 
-kc = LineAlpha.LINE()
-kc.login(token="EoFy5vQzjCQSXrHQ5BXb.9cLvUfhrGJx1lyydmxgBcW.2STdnVXq+nTjmy+ym/3F+/dzMp/yx4+KLmxKJoIqSb4=")
+kc = LineAlpha.LINE()#3
+kc.login(token="Eouvsbum4mHN0ZCPJAJb.9cLvUfhrGJx1lyydmxgBcW.2iio2IlX934n1H63ekBUSt0KGxKSKX4EugtX5IvUfxs=")
 kc.loginResult()
 
-ke = LineAlpha.LINE()
-ke.login(token="EoaaRfHB1sKaNucXN5Df.iC4lfEriEzKXeWEY6lQf+W.HsAWSdbR4t9XDi7GmsQuh1FlGQZsewtC3Aa98NVxGbU=")
+ke = LineAlpha.LINE()#4
+ke.login(token="EoD6z6BnPgtfThQnhfJf.iC4lfEriEzKXeWEY6lQf+W.X+P9YWaIxOn1fnaB1mAUNCSrNyFECSF/vq/aBbXN714=")
 ke.loginResult()
 
 kb = LineAlpha.LINE() #5
-kb.login(token="EodeGu7ngYZxPmhspyKf.AzOxSrYUoRO+s8R0wGFDNW.BmIR9wXrnlfhoOt3Gdo5FNm5i896nE95EBkf3o8F3nQ=")
+kb.login(token="EoMT51jBPCtky4iUPVAf.AzOxSrYUoRO+s8R0wGFDNW.26g4olVIYMdzXWVJlVF1Rr9wg42ttX25qPMDsusu7+8=")
 kb.loginResult()
 
-ks = LineAlpha.LINE()
-ks.login(token="EoXtzqW5ILA2L1rhbQq2.zz02fzUHgHMt43YFBMIUuG.2tpXa8gcsRhMBHhI13mHFod1AErjRBrZsHOB2IbpAVo=")
+ks = LineAlpha.LINE()#6
+ks.login(token="EoxleuEmwBAd2UaLF4L2.zz02fzUHgHMt43YFBMIUuG.UdBa3z70M97NsM11JQd0xRXgvwT/oceq6qTfN5bYp7g=")
 ks.loginResult()
 
-ka = LineAlpha.LINE()
-ka.login(token="Eo8iduypzM9WlzCCPjD1.6FEeUgZiJRekuif7AJkoyq.FlDVMUaPOlD5RYaNrI/9xbE3/tfCul/qcSzCatf4MUE=")
+ka = LineAlpha.LINE()#7
+ka.login(token="Eot0GRo01G4yXKZPKJN1.6FEeUgZiJRekuif7AJkoyq.tI8agyYW3I5bgV2twB3Z28s9Bwjlyoo+Cv9N4wEck4Q=")
 ka.loginResult()
 
-ko = LineAlpha.LINE()
-ko.login(token="EoAJEJtEs0Nk1Xc5NQpc.WU1DIxPO+PMAGO5zAJJf+a.zsaCIGiciwQHxLJuujE5eeMwttdCR3JuNkfZt+GvjVk=")
+ko = LineAlpha.LINE()#8
+ko.login(token="EoSazMZktBBj0dSu8juc.WU1DIxPO+PMAGO5zAJJf+a.mL7v0TXj/yDQqr11AObMgE7IfCUhNZ6GhQ6L6ph/+6M=")
 ko.loginResult()
 
-ku = LineAlpha.LINE()
-ku.login(token="EoRTFAeO7pu66GpPouZ0.SIIDQHB+PWCP2bXYI9JK8a.2cINdc17CgAG1qO+Sf6NHMdovpT2UGtRetu0c77MugA=")
+ku = LineAlpha.LINE()#9
+ku.login(token="EoiKaI8bH13Z6T4aF8S0.SIIDQHB+PWCP2bXYI9JK8a.zmI3EMrP9UHHXC41yk1ITAWS+IwLDyXXEjgpf2GIk0k=")
 kb.loginResult()
 
-print "==============login success mastah==============\n WELCOME TO MY BOT REGARDS @FERIANTOYP"
+print "==============login success mastah==============\n     WELCOME TO MY BOT REGARDS @FERIANTOYP"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -141,16 +141,16 @@ wait = {
     "protect":False,
     "cName":True,
     "dblack":False,
-    "cName":"ℱe̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆i̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍n͉̠̙͉̗̺̋̔ͧ̊t̘̟̼̉̈́͐͋͌̊o̜̓̇ͫ̉͊ͨy͉̝͖̻̯ͮ̒̂ͮ͋ͫͨp̱̱̬̻̞̩͎̌ͦ̏ͪ͋̚",
-    "cName2":"ɛҳɬɛཞɱıŋąɬơཞ",
-    "cName3":"ɛҳɬɛཞɱıŋąɬơཞ",
-    "cName4":"ɛҳɬɛཞɱıŋąɬơཞ",
-    "cName5":"ɛҳɬɛཞɱıŋąɬơཞ",
-    "cName6":"ɛҳɬɛཞɱıŋąɬơཞ",
-    "cName7":"ɛҳɬɛཞɱıŋąɬơཞ",
-    "cName8":"ɛҳɬɛཞɱıŋąɬơཞ",
-    "cName9":"ɛҳɬɛཞɱıŋąɬơཞ",
-    "cName10":"ɛҳɬɛཞɱıŋąɬơཞ",
+    "cName":"F̳͉̼͉̙͔͈͕̂̉̇e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̗̲̞̥̈ͭ̃ͨ̆i̞̟̫̺ͭ̒ͭͣa̘̫͈̭͌͛͌̇̇̍n͉̠̙͉̗̺̋̔ͧ̊t̘̟̼̉̈́͐͋͌̊o̜̓̇ͫ̉͊ͨy͉̝͖̻̯ͮ̒̂ͮ͋ͫͨp̱̱̬̻̞̩͎̌ͦ̏",
+    "cName2":"241",
+    "cName3":"Rakko v10",
+    "cName4":"Parry v10",
+    "cName5":"しりちゃんkicker&復旧アカ108",
+    "cName6":"Doctor.A v10",
+    "cName7":"Eliza v10",
+    "cName8":"しりちゃん追加保護ボット140",
+    "cName9":"しりちゃん追加保護ボット140",
+    "cName10":"しりちゃん追加保護ボット140",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
@@ -693,12 +693,9 @@ def bot(op):
 #---------------------------------------------#
         if op.type == 19:
             if op.param2 not in Bots:
-                if op.param2 in Bots:
-                    pass
                 elif wait["protect"] == True:
                     wait ["blacklist"][op.param2] = True
                     random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                    random.choice(KAC).inviteIntoGroup(op.param1,[op.param2])
         #---------------------------------#
 
         if op.type == 19:
