@@ -240,7 +240,7 @@ responsename = nadya.getProfile().displayName
 
 wait = {
     "LeaveRoom":True,
-    "AutoJoin":False,
+    "AutoJoin":True,
     "AutoJoinCancel":True,
     "memberscancel":30,
     "Members":1,
@@ -251,7 +251,7 @@ wait = {
     'steal':{},
     'gift':{},
     'likeOn':{},
-    'detectMention':True,
+    'detectMention':False,
     'kickMention':False,      
     'timeline':True,
     "Timeline":True,
@@ -264,7 +264,7 @@ wait = {
     "dblacklist":False,
     "Qr":False,
     "Contact":False,
-    "Sambutan":True,
+    "Sambutan":False,
     "Ghost":False,
     "inviteprotect":False,    
     "alwaysRead":False,    
