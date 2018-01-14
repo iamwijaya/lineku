@@ -10,7 +10,7 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 nadya = LineAlpha.LINE()
-nadya.login(token="Eo0MBfQLqS8E9vIWbxj4.Eh0O4tVu/uZCPuv82q769a.UpSZZYWJHefQdD3qoRLL8QMWG37r7XwhY68IJHTC8VA=")
+nadya.login(token="EoQ494L2yPKuWy6V6M10.Mn4yxliqDSbvwYAvIFTAea.C3LM8TyqIDPs67PHdmaPoKnCt1IXmz6IA+rsOTTJT7c=")
 print "Chucky-Login Success\n\n=====[Sukses Login]====="
 
 reload(sys)
@@ -43,9 +43,6 @@ selfMessage ="""
 ╠➩〘Getvid @〙
 ╠➩〘Friendlist〙
 ╠═════════════════════════
-║               By : ArkaLee
-║    http://line.me/ti/p/nYpnIWZs69
-╚═════════════════════════
 """
 
 botMessage ="""
@@ -61,9 +58,7 @@ botMessage ="""
 ╠➩〘Myname (Text)〙
 ╠➩〘@bye〙
 ╠═════════════════════════
-║               By : ArkaLee
-║    http://line.me/ti/p/nYpnIWZs69
-╚═════════════════════════
+
 """
 
 mediaMessage ="""
@@ -101,9 +96,6 @@ mediaMessage ="""
 ╠➩〘Id@en Text (Translate ID Ke En〙
 ╠➩〘Id@th Text (Translate ID Ke TH〙
 ╠➩〘En@id Text (Translate En Ke ID〙
-╠═════════════════════════
-║               By : ArkaLee
-║    http://line.me/ti/p/nYpnIWZs69
 ╚═════════════════════════
 """
 
@@ -135,11 +127,8 @@ groupMessage ="""
 ╠➩〘Getgroup image〙
 ╠➩〘Urlgroup Image〙
 ╠═════════════════════════
-║               By : ArkaLee
-║    http://line.me/ti/p/nYpnIWZs69
-╚═════════════════════════
 """
-arka="u787d28e13bd4f94cdca5457cd90efaf4"
+arka="u98de185cb21076c0555b269589fb5a10"
 
 setMessage ="""
 ╔═════════════════════════
@@ -152,9 +141,7 @@ setMessage ="""
 ╠➩〘Contact on/off〙
 ╠➩〘Simisimi on/off〙
 ╠═════════════════════════
-║               By : ArkaLee
-║    http://line.me/ti/p/nYpnIWZs69
-╚═════════════════════════
+
 """
 
 creatorMessage ="""
@@ -173,9 +160,7 @@ creatorMessage ="""
 ╠➩〘Bot restart〙
 ╠➩〘Turn off〙
 ╠═════════════════════════
-║               By : ArkaLee
-║    http://line.me/ti/p/nYpnIWZs69
-╚═════════════════════════
+
 """
 
 adminMessage ="""
@@ -214,9 +199,6 @@ adminMessage ="""
 ╠➩〘Respon on/off〙
 ╠➩〘Responkick on/off〙
 ╠═════════════════════════
-║               By : ArkaLee
-║    http://line.me/ti/p/nYpnIWZs69
-╚═════════════════════════
 """
 
 helpMessage ="""
@@ -237,17 +219,15 @@ helpMessage ="""
 ╠➩〘Speed test〙
 ╠➩〘Status〙
 ╠═════════════════════════
-║               By : ArkaLee
-║    http://line.me/ti/p/nYpnIWZs69
-╚═════════════════════════
+
 """
 
 
 KAC=[nadya]
 mid = nadya.getProfile().mid
 Bots=[mid]
-Creator=["u787d28e13bd4f94cdca5457cd90efaf4"]
-admin=["u787d28e13bd4f94cdca5457cd90efaf4"]
+Creator=[""]
+admin=[""]
 
 contact = nadya.getProfile()
 backup1 = nadya.getProfile()
@@ -275,7 +255,7 @@ wait = {
     'kickMention':False,      
     'timeline':True,
     "Timeline":True,
-    "comment":"Bot Auto Like ©By : ArkaLee\nContact Me : 👉 http://line.me/ti/p/nYpnIWZs69",    
+    "comment":"Bot Auto Like",    
     "commentOn":True,
     "commentBlack":{},
     "message":"Thx For Add Me (^_^)\nInvite Me To Your Group ヘ(^_^)ヘ",    
@@ -920,24 +900,9 @@ def bot(op):
  
             elif msg.text in ["Creator","Owner"]:
                 msg.contentType = 13
-                msg.contentMetadata = {'u787d28e13bd4f94cdca5457cd90efaf4': arka}
+                msg.contentMetadata = {'u98de185cb21076c0555b269589fb5a10': arka}
                 nadya.sendMessage(msg)
-		nadya.sendText(msg.to,"Itu Majikan Kami yang Tampan (^_^)")
-		
-            elif msg.text in ["Admin","admin"]:
-                msg.contentType = 13
-                admin1 = "u787d28e13bd4f94cdca5457cd90efaf4"
-                admin2 = "u8b2bb5214c1afc77d06901a535c23e30"
-                admin3 = "u57a54b914085fea6f04c19f6fe589057"
-                msg.contentMetadata = {'mid': tjia}
-                nadya.sendMessage(msg)
-                msg.contentMetadata = {'mid': admin1}
-                nadya.sendMessage(msg)
-                msg.contentMetadata = {'mid': admin2}
-                nadya.sendMessage(msg)
-                msg.contentMetadata = {'mid': admin3}
-                nadya.sendMessage(msg)                
-		nadya.sendText(msg.to,"Itu Admin Kami (^_^)")	
+		nadya.sendText(msg.to,"")
 		
  
                 
@@ -2387,7 +2352,7 @@ def bot(op):
             elif 'Crash' in msg.text:
               if msg.from_ in Creator:
                 msg.contentType = 13
-                msg.contentMetadata = {'u787d28e13bd4f94cdca5457cd90efaf4': "ARKA,'"}
+                msg.contentMetadata = {'d28e13bd4u787f94cdca5457cd90efaf4': "ARKA,'"}
                 nadya.sendMessage(msg)
 
  
