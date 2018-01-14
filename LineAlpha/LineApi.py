@@ -177,9 +177,6 @@ class LINE:
 
   def getMessageBoxWrapUpList(self, start, messageBoxCount):
         return self.Talk.client.getMessageBoxWrapUpList(start, messageBoxCount)
-  
-  def removeAllMessages(self, lastMessageId):
-     return self.Talk.client.removeAllMessages(0, lastMessageId)
 
   """Contact"""
 
